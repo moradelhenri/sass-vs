@@ -1,0 +1,134 @@
+
+@media screen and (max-width: 620px){
+  @font-face {
+    font-family:"Roboto";
+    src: url("Roboto/Roboto-Light");
+  }
+
+body{margin: 0;
+  padding: 0;
+  height:2218px; 
+    width:100%;
+    font-family: 'Roboto';
+}
+
+ .chargement{border: 10px solid #9356DC; ;
+   /*création du loader*/
+   width: 100px;
+   height: 100px;
+  border-top: solid 12px #FF79DA;
+  border-bottom: 10px solid#99E2D0;
+  border-radius: 50%;
+  /*placement au centre et au milieu*/
+  margin: auto;
+  position: absolute;
+  top:0; bottom: 0;left: 0;right: 0;
+  animation: spinnone 1.5s linear infinite ;
+  animation-iteration-count: 3;
+  animation-fill-mode:forwards;
+  visibility:hidden;
+ }
+ @keyframes spin  {
+  0% {
+    transform: rotate(0);
+  }
+ 100% {
+    transform: rotate(360deg);visibility:hidden;
+  }
+ 
+}
+@keyframes wapper_slide {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+ }
+}
+
+ .wapper{ width:100%;
+animation-duration:3s;
+animation-name:wapper_slide none;
+  margin: auto;
+    display: grid;
+   height:100%; 
+    grid-template-columns: 1fr;
+   grid-template-rows:1fr 1fr 2fr 6fr 1fr;
+   border: 1px solid black;
+   grid-template-areas:
+   "header"" header_nav"
+   "nav" "section"   
+   "foot";
+   
+ }
+
+ header{display: grid;   
+  grid-area:header;
+  font-family :'Shrikhand',cursif;
+  font-size: medium;
+  width: 100%; 
+ grid-template-rows:repeat(2,1fr);
+.header-box{background-color: yellow;
+  display: grid;
+.header-logo{ width: 200px; 
+  height: 30px;
+  border: 1px solid black;
+ grid-area: 1/2;
+ margin-top: 1rem;
+}
+}
+}
+ .header-box_lieu{background-color: antiquewhite;
+  width: 100%;
+  display:grid;
+ grid-template-columns:repeat(3, 1fr);
+font-family:'roboto light', sans-serif;
+.header-icon{grid-area: 1/2;
+ margin-top: 1.5rem;
+&_lieu{grid-area:1/2;
+margin-left: 2rem;
+border: 1px solid black;
+
+}
+}
+
+ }
+ .header_nav{background-color: brown;
+  grid-area: header_nav;
+  display:grid ;
+  grid-template-columns: repeat(1, 3fr);
+ grid-template-rows:repeat(6, 1fr);
+nav_res{background-color: blueviolet;
+   margin-left:14%;
+border: 1px solid black;
+h1 span{ margin-left:12%;
+.header_nav-res-dec{background-color: chartreuse;
+  border: 1px solid black;
+  margin-left: 10%;
+  font-family:'Roboto light',sans-serif;
+h2 span{margin-left: 10%;background-color: crimson;
+
+}
+}
+ }
+ }
+ }
+ nav{background-color: chartreuse;
+
+     grid-area: nav;
+    
+ }
+ section{background-color: cyan;
+ grid-area: section;
+ 
+ }
+ footer{background-color: blue;
+  grid-area:foot;
+ font-size:large;
+ color:white;
+ 
+ }
+}
