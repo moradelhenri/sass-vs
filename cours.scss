@@ -1,4 +1,4 @@
-
+@import "vendors/reset.scss";
 @media screen and (max-width: 620px){
   @font-face {
     font-family:"Roboto";
@@ -12,7 +12,7 @@ body{margin: 0;
     font-family: 'Roboto';
 }
 
- .chargement{border: 10px solid #9356DC; ;
+ .chargement{border: 10px solid #9356DC; 
    /*création du loader*/
    width: 100px;
    height: 100px;
@@ -56,7 +56,7 @@ animation-name:wapper_slide none;
     display: grid;
    height:100%; 
     grid-template-columns: 1fr;
-   grid-template-rows:1fr 1fr 2fr 6fr 1fr;
+   grid-template-rows:1fr 1fr 2fr 6fr 1fr ;
    border: 1px solid black;
    grid-template-areas:
    "header"" header_nav"
@@ -71,55 +71,77 @@ animation-name:wapper_slide none;
   font-size: medium;
   width: 100%; 
  grid-template-rows:repeat(2,1fr);
-.header-box{background-color: yellow;
+.header-box{background-color: #ffff;
   display: grid;
 .header-logo{ width: 200px; 
-  height: 30px;
-  border: 1px solid black;
+  height: 30px; 
  grid-area: 1/2;
  margin-top: 1rem;
 }
 }
 }
- .header-box_lieu{background-color: antiquewhite;
+ .header-box_lieu{background-color:#d9d9d9;
   width: 100%;
-  display:grid;
+  display:grid;  
  grid-template-columns:repeat(3, 1fr);
 font-family:'roboto light', sans-serif;
 .header-icon{grid-area: 1/2;
- margin-top: 1.5rem;
+  margin-left:10%;
+align-self: center;
 &_lieu{grid-area:1/2;
-margin-left: 2rem;
-border: 1px solid black;
-
+margin-left: 3rem;
+width: 150%;
+align-self: center;
 }
 }
 
  }
- .header_nav{background-color: brown;
+ .header_nav{background-color: #f2f2f2;
   grid-area: header_nav;
   display:grid ;
+  height: 70%;
   grid-template-columns: repeat(1, 3fr);
  grid-template-rows:repeat(6, 1fr);
-nav_res{background-color: blueviolet;
-   margin-left:14%;
-border: 1px solid black;
-h1 span{ margin-left:12%;
-.header_nav-res-dec{background-color: chartreuse;
-  border: 1px solid black;
-  margin-left: 10%;
-  font-family:'Roboto light',sans-serif;
-h2 span{margin-left: 10%;background-color: crimson;
+  .header_nav_res{
+   margin-left:28%;
+   font-family:'Shrikhand',cursif;
+font-weight: 300;
+font-size: x-large;
+ span{ margin-left:10%;
 
-}
-}
+} 
  }
+ .header_nav-box-dec{width:100%;
+ display: grid;  
+  margin-left: 25%;
+  font-size: larger;
+  font-family:'Roboto light',sans-serif;
+ h3 span{margin-left: 8%;
+  }
+}
+
+ .box_btn{ border: black 1px solid;
+  background:linear-gradient(180deg, #FF79DA,#9356DC);
+cursor:pointer;
+margin-top:30px;
+width: 55%;
+margin-left: 30%;
+height: 100%;
+border-radius: 30px;
+display:flex; 
+ .box_btn-btn{
+align-self: center;
+margin-left:12%;
+display: inline;
+color: white;
+font-family:'Roboto',sans-serif;
+font-weight: 600;
  }
+}
  }
  nav{background-color: chartreuse;
-
      grid-area: nav;
-    
+   
  }
  section{background-color: cyan;
  grid-area: section;
