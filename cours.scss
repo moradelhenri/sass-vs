@@ -152,6 +152,10 @@ font-weight: 600;
  }
 }
  }
+ .box_btn:hover{ transform: scale(1.015);
+  transition-duration: 4s;
+
+ }
  nav{background-color: #FEFEFE;
      grid-area: nav;
      margin-top:-78%;
@@ -175,58 +179,100 @@ font-weight: 600;
   border-top-left-radius:30px;
   border-top-right-radius:30px;
   box-shadow: 0px 5px 5px -3px #333; 
+  width: 85%;
+  height: 55%;
+  background-color: #f2f2f2;
+  margin-left:7%;
+  display: flex;
  }
  
-.box_un { width: 85%;
-  height: 55%;
-   background-color: #f2f2f2;
-margin-top: -7%;
-@include fonction-radius;
-margin-left: 7%;
-display: flex;
- :hover{
-cursor: pointer;
-
-background:$color-secondaire;
-}
-
-
-
-.box_un-circle{border: solid black 1px;
-  width: 23px;
+@mixin circle {width: 23px;
   height: 23px;
 display: grid;
 align-self: center;
-
 margin-left: -4%;
   background-color:$color-secondaire;
   border-radius:20px;
-  span{margin-left:35%;
-color:white;
-font-size:12px;
-font-weight: bold;
-align-self: center; 
+  
+}
+@mixin span_circle {
+  margin-left:35%;
+  color:white;
+  font-size:12px;
+  font-weight: bold;
+  align-self: center; 
+  
+}
+@mixin icon_center{
+  margin-left: 8%;
+  align-self:center;
+  opacity: 50%;
+
+}
+@mixin phrase_box {
+  margin-left:1.8rem;
+  align-self: center;
+  font-weight: bold;
+  
+}
+
+.box_un { 
+  
+ 
+margin-top: -7%;
+@include fonction-radius;
+.box_un-circle{
+ @include circle; 
+  span{@include span_circle;
   }
+
+
+
 
 }
 .mobile{width: 30%px;
   height: 30%;
-  display:flex;
-  margin-left: 9%;
-  align-self: center;
+@include icon_center;
 }
-  .mobile_choi{margin-left:1.8rem;
-align-self: center;
-font-weight: bold;
-display:grid;
+  .mobile_choi{
+    @include phrase_box;
   }
 
 }
 
+.box_un:hover,.box_deux:hover,.box_trois:hover{background-color: 
+  transparentize($color-secondaire, .8);
+}
+.box_deux{@include fonction-radius;
 
+margin-top: -16%;
+.box_deux-circle{
+  @include circle;
+span {@include span_circle;
+ } 
+}
+}
+.list{
+ @include icon_center;
+}
+.list_com{@include phrase_box;
+}
 
+.box_trois{@include fonction-radius;
+margin-top: -25%;
+  .box_trois-circle{
+    @include circle;
+    span {@include span_circle;
+}
 
+}
+}
+.food{@include icon_center;
+}
 
+ .food_dug{@include phrase_box;
+
+ }
 
 
 

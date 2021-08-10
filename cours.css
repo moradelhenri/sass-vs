@@ -260,6 +260,12 @@ td, th {
     font-family: 'Roboto',sans-serif;
     font-weight: 600;
   }
+  .box_btn:hover {
+    -webkit-transform: scale(1.015);
+            transform: scale(1.015);
+    -webkit-transition-duration: 4s;
+            transition-duration: 4s;
+  }
   nav {
     background-color: #FEFEFE;
     -ms-grid-row: 3;
@@ -284,9 +290,6 @@ td, th {
     font-weight: bold;
   }
   .box_un {
-    width: 85%;
-    height: 55%;
-    background-color: #f2f2f2;
     margin-top: -7%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -294,17 +297,15 @@ td, th {
     border-top-right-radius: 30px;
     -webkit-box-shadow: 0px 5px 5px -3px #333;
             box-shadow: 0px 5px 5px -3px #333;
+    width: 85%;
+    height: 55%;
+    background-color: #f2f2f2;
     margin-left: 7%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .box_un :hover {
-    cursor: pointer;
-    background: #9356DC;
-  }
   .box_un .box_un-circle {
-    border: solid black 1px;
     width: 23px;
     height: 23px;
     display: -ms-grid;
@@ -327,20 +328,121 @@ td, th {
   .box_un .mobile {
     width: 30%px;
     height: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 9%;
+    margin-left: 8%;
     -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
+    opacity: 50%;
   }
   .box_un .mobile_choi {
     margin-left: 1.8rem;
-    -ms-grid-row-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
     font-weight: bold;
+  }
+  .box_un:hover, .box_deux:hover, .box_trois:hover {
+    background-color: rgba(147, 86, 220, 0.2);
+  }
+  .box_deux {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    -webkit-box-shadow: 0px 5px 5px -3px #333;
+            box-shadow: 0px 5px 5px -3px #333;
+    width: 85%;
+    height: 55%;
+    background-color: #f2f2f2;
+    margin-left: 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -16%;
+  }
+  .box_deux .box_deux-circle {
+    width: 23px;
+    height: 23px;
     display: -ms-grid;
     display: grid;
+    -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: -4%;
+    background-color: #9356DC;
+    border-radius: 20px;
+  }
+  .box_deux .box_deux-circle span {
+    margin-left: 35%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .list {
+    margin-left: 8%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    opacity: 50%;
+  }
+  .list_com {
+    margin-left: 1.8rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-weight: bold;
+  }
+  .box_trois {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    -webkit-box-shadow: 0px 5px 5px -3px #333;
+            box-shadow: 0px 5px 5px -3px #333;
+    width: 85%;
+    height: 55%;
+    background-color: #f2f2f2;
+    margin-left: 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -25%;
+  }
+  .box_trois .box_trois-circle {
+    width: 23px;
+    height: 23px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: -4%;
+    background-color: #9356DC;
+    border-radius: 20px;
+  }
+  .box_trois .box_trois-circle span {
+    margin-left: 35%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .food {
+    margin-left: 8%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    opacity: 50%;
+  }
+  .food_dug {
+    margin-left: 1.8rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-weight: bold;
   }
   section {
     background-color: cyan;
