@@ -155,7 +155,17 @@ font-weight: 600;
  .box_btn:hover{ transform: scale(1.015);
   transition-duration: 4s;
 
+
  }
+ @mixin titre_nav-sec{
+  font-size: x-large;
+margin-top: 12%;
+margin-left:8%;
+font-weight:bold;
+ 
+}
+
+
  nav{background-color: #FEFEFE;
      grid-area: nav;
      margin-top:-78%;
@@ -166,15 +176,19 @@ font-weight: 600;
    
      width:100%;
      .nav_box-fon{        
-      font-size: x-large;
-     margin-top: 12%;
-    margin-left: 8%;
-    font-weight: bold;
+     @include titre_nav-sec;
 
      }
     }
  }
- @mixin fonction-radius {border-bottom-left-radius:30px;
+
+
+
+ 
+ 
+ @mixin fonction-radius{   
+
+border-bottom-left-radius:30px;
   border-bottom-right-radius:30px;
   border-top-left-radius:30px;
   border-top-right-radius:30px;
@@ -275,15 +289,23 @@ margin-top: -25%;
  }
 
 
-
- section{background-color: cyan;
+ section{  background-color: #f2f2f2;
  grid-area: section;
+margin-top: -55%;
+
+
+.restaurant{margin-top: 20%;
+@include titre_nav-sec;
+}
+
+
+
  
  }
  footer{background-color: blue;
   grid-area:foot;
  font-size:large;
  color:white;
- 
+ margin-top: 300%;
  }
 }
