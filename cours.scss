@@ -1,4 +1,6 @@
+
 @import "vendors/reset.scss";
+
 @media screen and (max-width: 400px){
   @font-face {
     font-family:"Roboto";
@@ -14,7 +16,10 @@ body{margin: 0;
     width:100%;
     font-family:'Roboto',sans-serif;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
  .chargement{border: 10px solid $color-secondaire; 
    /*création du loader*/
    width: 100px;
@@ -294,15 +299,101 @@ margin-top: -25%;
 margin-top: -55%;
 
 
-.restaurant{margin-top: 20%;
+.restaurant{margin-top:2rem;
 @include titre_nav-sec;
+}
+.section_box{
+ background-color:#FEFEFE;
+ width:86%;
+ height: 20%;
+ margin-left:7%;
+ margin-top:8% ;
+ border-radius:20px;
+
+.section_box-img{
+  border-top-right-radius:20px;
+ height:70%; 
+ width:100% ;
+}
+
+.section_box-nou{
+  background:$color-tertiaire;
+ height:30px;
+  margin-left:72% ;
+  margin-top:-165px ;
+  display: flex;
+  width:80px; 
+  border-radius: 3px;
+  contain:paint ;
+}
+ span{color:#066822;
+align-self:center ;
+margin-left:10px;
+font-size:13px;
+font-weight:500 ; 
+}
+
+}
+ 
+ }
+.section_box-pal{
+ 
+
+display:flex ;margin-top:42%;
+height:60px;
+
+h1{  font-weight:bold ;
+  margin-left:8px;
+  margin-top:10px;
+ 
+
+}
+  h2{margin-top:20px;
+    margin-left:-40%;
+  }
+
+  
+
+  
+ 
+  .heart {display:flex;
+     margin-left:150px;
+     margin-top:20px;
+    border-radius:50px;
+    font-size:black;
+    height: 27px;
+    text-decoration:black;
+  color:black;
+  }
+ 
+
+
+
+  
+ 
+}
+.heart:hover{
+  cursor: pointer;
+  transition: color 1s ease-out;
+
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+
 }
 
 
 
+
  
- }
- footer{background-color: blue;
+
+
+
+ 
+ 
+
+
+
+ footer{
   grid-area:foot;
  font-size:large;
  color:white;
