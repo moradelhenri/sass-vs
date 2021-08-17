@@ -1,4 +1,3 @@
-
 @import "vendors/reset.scss";
 
 @media screen and (max-width: 400px){
@@ -92,8 +91,9 @@ animation-name:wapper_slide none;
 }
  .header-box_lieu{background-color:#DCDCDC;
   width: 100%;
+  margin-top:10px;
   display:grid;
-  height: 84%; 
+  height:50px; 
   box-shadow:0 -5px 5px -5px #9E9E9E;  
  grid-template-columns:repeat(3, 1fr);
 font-family: "Roboto",sans-serif;
@@ -109,12 +109,11 @@ align-self: center;
 }
 
  }
- .header_nav{background-color:  #f2f2f2;
+ .header_nav{background-color:#f2f2f2;
   grid-area: header_nav;
   display:grid ;
   height:55%;
- 
-  margin-top:-16%;
+ margin-top:-10px;
   grid-template-columns: repeat(1, 3fr);
  grid-template-rows:repeat(6, 1fr);
   .header_nav_res{
@@ -123,7 +122,7 @@ align-self: center;
   font-family:"Roboto",sans-serif;
  font-size:24px;
   font-weight: 700;
- span{ margin-left:10%;
+ p{ margin-left:10%;
 
 } 
  }
@@ -133,7 +132,7 @@ align-self: center;
   margin-top: 10px; 
   font-size: larger;
   font-family:'Roboto light',sans-serif;
- h3 span{margin-left: 8%;
+ h3 p{margin-left: 8%;
   }
 }
 
@@ -156,11 +155,11 @@ font-family:'Roboto',sans-serif;
 font-weight: 600;
  }
 }
- }
+
  .box_btn:hover{ transform: scale(1.015);
   transition-duration: 4s;
 
-
+ }
  }
  @mixin titre_nav-sec{
   font-size: x-large;
@@ -186,9 +185,15 @@ font-weight:bold;
      }
     }
  }
-
-
-
+ @mixin boxnou{  
+  background:$color-tertiaire;
+  height:30px;  
+   display:flex;
+   width:80px; 
+   border-radius: 3px;
+   contain:paint ;
+   margin-left:72%;
+ }
  
  
  @mixin fonction-radius{   
@@ -244,11 +249,11 @@ margin-top: -7%;
  @include circle; 
   span{@include span_circle;
   }
-
-
-
-
 }
+ 
+
+
+
 .mobile{width: 30%px;
   height: 30%;
 @include icon_center;
@@ -297,34 +302,58 @@ margin-top: -25%;
  section{  background-color: #f2f2f2;
  grid-area: section;
 margin-top: -55%;
-
-
+display: grid;
+grid-template-rows:0.2fr repeat(4, 1fr) 0.2fr;
+row-gap: 1rem;
 .restaurant{margin-top:2rem;
 @include titre_nav-sec;
+
 }
+}
+@mixin section_box_h1{
+  grid-column: 1fr 1fr;
+  display:grid;
+  height:60px;
+}
+
 .section_box{
  background-color:#FEFEFE;
  width:86%;
- height: 20%;
+ height: 257px;
+
  margin-left:7%;
- margin-top:8% ;
  border-radius:20px;
 
-.section_box-img{
-  border-top-right-radius:20px;
- height:70%; 
- width:100% ;
 }
 
+@mixin section_img {
+   display: flex;
+  border-top-right-radius:20px;
+  border-top-left-radius:20px;
+  width:100% ;
+  height: 180px;
+}
+
+@mixin heart{border-radius:50px;   
+  height: 27px;
+  
+}
+
+
+
+.section_box-img{
+  
+ @include section_img;
+}
+  
+
+
 .section_box-nou{
-  background:$color-tertiaire;
- height:30px;
+ @include boxnou;
   margin-left:72% ;
   margin-top:-165px ;
-  display: flex;
-  width:80px; 
-  border-radius: 3px;
-  contain:paint ;
+  
+ 
 }
  span{color:#066822;
 align-self:center ;
@@ -333,63 +362,145 @@ font-size:13px;
 font-weight:500 ; 
 }
 
-}
- 
- }
-.section_box-pal{
- 
 
-display:flex ;margin-top:42%;
-height:60px;
+  @mixin box_hearts{
+    width: 29px;
+   height: 25px;
+   background-color: #FFF;
+   display: grid;
+   margin-left:85% ;
+   margin-top:-45px;
+  
+
+}
+.section_box-pal{
+@include section_box_h1;
+margin-top:42%;
+}
 
 h1{  font-weight:bold ;
   margin-left:8px;
   margin-top:10px;
- 
-
 }
-  h2{margin-top:20px;
-    margin-left:-40%;
-  }
 
-  
-
-  
- 
-  .heart {display:flex;
-     margin-left:150px;
-     margin-top:20px;
-    border-radius:50px;
-    font-size:black;
-    height: 27px;
-    text-decoration:black;
-  color:black;
+  h2{ 
+    margin-left:8px;
+    display:grid;
   }
  
 
-
-
   
+
+ .box_heart { 
+ @include box_hearts;
+
+
+  .heart {
+@include heart;  
+   
+  }
+
  
+  
 }
-.heart:hover{
-  cursor: pointer;
+@mixin heart_hover{ cursor: pointer;
   transition: color 1s ease-out;
-
-
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: -webkit-gradient(linear,
+     left top, left bottom,
+     from($color-secondaire), to($color-primary));
+}
+.heart:hover,.heart_deux-img:hover,.heart_trois-img:hover{
+  @include heart_hover;
 
 }
 
+@mixin section_box-s{
+   background-color:#FEFEFE;
+  width:86%;
+  height: 257px;
+display: grid;
+  margin-left:7%;
+  border-radius:20px;
+
+  
+  
+}
+@mixin section_img {
+  display: flex;
+ border-top-right-radius:20px;
+ border-top-left-radius:20px;
+ width:100% ;
+ height: 180px;
+}
+.section_box-deux{
+@include section_box-s; 
+
+.section_box-deux-img{ @include section_img;
 
 
+ grid-area:3/1;
 
+}
+
+}
+.section_box-deux-nou {
+   @include boxnou;
  
 
+margin-top:-53%;
+}
+.section_box-deux-not{
+  @include section_box_h1;
+
+margin-top:-30px; 
+
+}
+.section_box-deux-not{
+  margin-top:10px;
 
 
+  
+}
+h1, h2{margin-left:8px;
+
+
+
+}
+.box_heart-deux{
+ @include box_hearts;
+
+ img{
+  margin-top:1px;
+ @include heart;
  
+ }
+}
+
+.section_box-trois{
+  @include section_box-s;  
+  grid-area:4/1;
+.section_box-trois-img{
+  @include section_img;
  
+}
+}
+.section_box-trois-fran{
+margin-top:-10px;
+
+h2{margin-top:5px;
+
+}
+}
+.box_heart-trois{
+   @include box_hearts;
+ 
+   .heart_trois-img{
+    margin-top:1px;
+ @include heart;
+
+}
+
+}
 
 
 
@@ -400,3 +511,4 @@ h1{  font-weight:bold ;
  margin-top: 300%;
  }
 }
+
