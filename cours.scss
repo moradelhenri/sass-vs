@@ -30,10 +30,10 @@ a {
   margin: auto;
   position: absolute;
   top:0; bottom: 0;left: 0;right: 0;
-  animation: spinnone 1.5s linear infinite ;
+  animation:spin 1.5s linear infinite ;
   animation-iteration-count: 3;
   animation-fill-mode:forwards;
-  visibility:hidden;
+ 
  }
  @keyframes spin  {
   0% {
@@ -57,8 +57,8 @@ a {
 }
 
  .wapper{ width:100%;
-animation-duration:3s;
-animation-name:wapper_slide none;
+animation-duration:4s;
+animation-name:wapper_slide;
   margin: auto;
     display: grid;
    height:100%; 
@@ -502,7 +502,18 @@ h2{margin-top:5px;
 
 }
 
+.section_box-quatre{
+  @include section_box-s;
+ .section_box-quatre-img {
+  @include section_img;   
+ }
+   
+}
+.section_box-quatre-sens{
+h1{margin-top:-5px;
 
+}
+}
 
  footer{
   grid-area:foot;
