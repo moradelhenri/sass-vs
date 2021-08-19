@@ -102,7 +102,6 @@ td, th {
     width: 100%;
     animation-duration: 4s;
     animation-name: wapper_slidenone;
-    margin: auto;
     display: grid;
     height: 2263px;
     grid-template-columns: 1fr;
