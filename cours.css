@@ -47,7 +47,7 @@ td, th {
 @media screen and (min-width: 20px) and (max-width: 600px) {
   @font-face {
     font-family: 'Roboto';
-    src: url("./fonts/Roboto/Roboto-Light.woff");
+    src: url(Roboto/Roboto-Light);
   }
   body {
     margin: 0;
