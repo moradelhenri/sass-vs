@@ -1,6 +1,6 @@
 @import "vendors/reset.scss";
 
-@media screen and (min-width: 200px) and (max-width: 600px){ 
+@media screen and (min-width: 20px) and (max-width: 600px){ 
   @font-face {
     font-family: 'Roboto';
  src:url('./fonts/Roboto/Roboto-Light.woff')
@@ -312,7 +312,7 @@ row-gap: 1rem;
 }
 }
 @mixin section_box_h1{
-  grid-template-columns: 1fr, 1fr;
+
   display:grid;
   height:60px;
 }

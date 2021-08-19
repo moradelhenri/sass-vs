@@ -44,7 +44,7 @@ td, th {
   padding: 0;
 }
 
-@media screen and (min-width: 200px) and (max-width: 600px) {
+@media screen and (min-width: 20px) and (max-width: 600px) {
   @font-face {
     font-family: 'Roboto';
     src: url("./fonts/Roboto/Roboto-Light.woff");
@@ -391,7 +391,6 @@ td, th {
     font-weight: 500;
   }
   .section_box-pal {
-    grid-template-columns: 1fr, 1fr;
     display: grid;
     height: 60px;
     margin-top: 42%;
@@ -449,7 +448,6 @@ td, th {
     margin-top: -53%;
   }
   .section_box-deux-not {
-    grid-template-columns: 1fr, 1fr;
     display: grid;
     height: 60px;
     margin-top: -30px;
