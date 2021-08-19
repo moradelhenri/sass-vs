@@ -2,8 +2,8 @@
 
 @media screen and (min-width: 20px) and (max-width: 600px){ 
   @font-face {
-    font-family: 'Roboto';
- src:url(Roboto/Roboto-Light)
+    font-family:"Roboto";
+    src: url("Roboto/Roboto-light/Roboto Light");
   }
   $color-primary:#FF79DA;
   $color-secondaire:#9356DC;
