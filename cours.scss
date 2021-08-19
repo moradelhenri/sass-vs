@@ -1,6 +1,6 @@
 @import "vendors/reset.scss";
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
   @font-face {
     font-family:"Roboto";
     src: url("Roboto/Roboto-Light");
@@ -58,7 +58,7 @@ a {
 
  .wapper{ width:100%;
 animation-duration:4s;
-animation-name:wapper_slide;
+animation-name:wapper_slidenone;
   margin: auto;
     display: grid;
    height:2263px; 
@@ -112,8 +112,8 @@ align-self: center;
  .header_nav{background-color:#f2f2f2;
   grid-area: header_nav;
   display:grid ;
-  height:55%;
- margin-top:-10px;
+  height:58%;
+ margin-top:-45px;
   grid-template-columns: repeat(1, 3fr);
  grid-template-rows:repeat(6, 1fr);
   .header_nav_res{
@@ -336,6 +336,8 @@ row-gap: 1rem;
 
 @mixin heart{border-radius:50px;   
   height: 27px;
+ 
+
   
 }
 
@@ -408,6 +410,13 @@ h1{  font-weight:bold ;
     background: -webkit-gradient(linear,
      left top, left bottom,
      from($color-secondaire), to($color-primary));
+    
+     
+     
+
+
+
+
 }
 .heart:hover,.heart_deux-img:hover,.heart_trois-img:hover{
   @include heart_hover;
@@ -519,12 +528,78 @@ h1{margin-top:-5px;
   grid-area:foot;
 width:100%;
 height:100%;
-background-color:black;
-
- border: 1px solid black 
-
-.
+background-color:#322f2f;
  
+
+ } 
+
+.footer_box-logo{width:150px;
+  height:30px;
+
+  margin-top:20px ;
+  display:grid ; 
+  margin-left:10px;  .footer_logo{ 
+ color:white;
+ font-size: 17px;
+  font-family :'Shrikhand',cursif;
+  }
+
+ }
+
+
+ .footer_list{display:grid;
+ 
+ grid-template-rows:repeat(4, 1fr);
+margin-left:10px; 
+
+
+
+
+
+ 
+
+ }
+.footer_list-un,.footer_list-deux{ 
+ font-weight:600;
+ font-size:15px ;
+ margin-left:30px;
+ color:white;
+ margin-top:-15px;
 }
+.fa-hands-helping,.fa-utensils{color:white;
+  margin-top:20px;
+  display:grid;
+
+
 }
+.footer_box-list{
+  margin-top:-5px;
+}
+.footer_box-list-deux{
+  margin-top:-16px;
+}
+
+.footer_list-trois,.footer_contact{color:white;
+  font-weight:600; 
+   font-size:15px ;
+ 
+ }
+ .footer_list-trois{
+
+width:150px;
+margin-top:-8px;
+
+ }
+ .footer_contact{
+ display:grid;
+
+width:150px;
+margin-top:-16px;
+ }
+
+
+    
+}
+
+
 
