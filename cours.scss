@@ -82,8 +82,8 @@ animation-name:wapper_slidenone;
  grid-template-rows:repeat(2,1fr);
 .header-box{background-color:#FEFEFE;
   display: grid;
-.header-logo{ width:60%; 
-  height: 30px; 
+.header-logo{
+ font-size:30px;
  grid-area: 1/2;
  margin-top: 1.4rem;
 }

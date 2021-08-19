@@ -124,8 +124,7 @@ td, th {
     display: grid;
   }
   header .header-box .header-logo {
-    width: 60%;
-    height: 30px;
+    font-size: 30px;
     grid-area: 1/2;
     margin-top: 1.4rem;
   }
