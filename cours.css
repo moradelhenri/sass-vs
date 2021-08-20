@@ -44,10 +44,10 @@ td, th {
   padding: 0;
 }
 
-@media screen and (min-width: 20px) and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   @font-face {
     font-family: "Roboto";
-    src: url("Roboto/Roboto-light/Roboto Light");
+    src: url("Roboto/Roboto");
   }
   body {
     margin: 0;
@@ -113,8 +113,6 @@ td, th {
   header {
     display: grid;
     grid-area: header;
-    font-family: 'Shrikhand',cursif;
-    font-size: medium;
     height: 70%;
     width: 100%;
     margin-top: 0.3rem;
@@ -128,6 +126,7 @@ td, th {
     font-size: 30px;
     grid-area: 1/2;
     margin-top: 1.4rem;
+    font-family: 'Shrikhand',cursif;
   }
   .header-box_lieu {
     background-color: #DCDCDC;
@@ -137,7 +136,6 @@ td, th {
     height: 50px;
     box-shadow: 0 -5px 5px -5px #9E9E9E;
     grid-template-columns: repeat(3, 1fr);
-    font-family: "Roboto",sans-serif;
   }
   .header-box_lieu .header-icon {
     grid-area: 1/2;
@@ -150,6 +148,9 @@ td, th {
     grid-area: 1/2;
     width: 150%;
     align-self: center;
+    font-family: "roboto",sans-serif;
+    font-size: 15px;
+    font-weight: 600;
   }
   .header_nav {
     background-color: #f2f2f2;
@@ -163,7 +164,6 @@ td, th {
   .header_nav .header_nav_res {
     margin-top: 2.5rem;
     margin-left: 15%;
-    font-family: "Roboto",sans-serif;
     font-size: 24px;
     font-weight: 700;
   }
@@ -176,7 +176,7 @@ td, th {
     margin-left: 8%;
     margin-top: 10px;
     font-size: larger;
-    font-family: 'Roboto light',sans-serif;
+    font-family: "Roboto Light",sans-serif;
   }
   .header_nav .header_nav-box-dec h3 p {
     margin-left: 8%;
@@ -197,7 +197,6 @@ td, th {
     margin-left: 8%;
     display: inline;
     color: white;
-    font-family: 'Roboto',sans-serif;
     font-weight: 600;
   }
   .header_nav .box_btn:hover {
@@ -375,7 +374,7 @@ td, th {
   .section_box-nou {
     background: #99E2D0;
     height: 30px;
-    display: flex;
+    display: grid;
     width: 80px;
     border-radius: 3px;
     contain: paint;
@@ -393,7 +392,7 @@ td, th {
   .section_box-pal {
     display: grid;
     height: 60px;
-    margin-top: 42%;
+    margin-top: 45%;
   }
   strong {
     font-weight: bold;
@@ -440,7 +439,7 @@ td, th {
   .section_box-deux-nou {
     background: #99E2D0;
     height: 30px;
-    display: flex;
+    display: grid;
     width: 80px;
     border-radius: 3px;
     contain: paint;
@@ -450,12 +449,8 @@ td, th {
   .section_box-deux-not {
     display: grid;
     height: 60px;
-    margin-top: -30px;
   }
-  .section_box-deux-not {
-    margin-top: 10px;
-  }
-  h1, h2 {
+  h2 {
     margin-left: 8px;
   }
   .box_heart-deux {
@@ -488,10 +483,7 @@ td, th {
     height: 180px;
   }
   .section_box-trois-fran {
-    margin-top: -10px;
-  }
-  .section_box-trois-fran h2 {
-    margin-top: 5px;
+    display: grid;
   }
   .box_heart-trois {
     width: 29px;
@@ -521,8 +513,8 @@ td, th {
     width: 100%;
     height: 180px;
   }
-  .section_box-quatre-sens h1 {
-    margin-top: -5px;
+  .section_box-quatre-sens {
+    display: grid;
   }
   footer {
     grid-area: foot;
