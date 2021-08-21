@@ -44,10 +44,10 @@ td, th {
   padding: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
   @font-face {
     font-family: "Roboto";
-    src: url("Roboto/Roboto");
+    src: url("Roboto/Roboto light");
   }
   body {
     margin: 0;
@@ -104,7 +104,7 @@ td, th {
     animation-name: wapper_slidenone;
     margin: auto;
     display: grid;
-    height: 2263px;
+    height: 2248px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 2fr 6fr 1fr;
     border: 1px solid black;
@@ -113,7 +113,6 @@ td, th {
   header {
     display: grid;
     grid-area: header;
-    height: 70%;
     width: 100%;
     margin-top: 0.3rem;
     grid-template-rows: repeat(2, 1fr);
@@ -131,7 +130,7 @@ td, th {
   .header-box_lieu {
     background-color: #DCDCDC;
     width: 100%;
-    margin-top: 10px;
+    margin-top: -20px;
     display: grid;
     height: 50px;
     box-shadow: 0 -5px 5px -5px #9E9E9E;
@@ -156,16 +155,17 @@ td, th {
     background-color: #f2f2f2;
     grid-area: header_nav;
     display: grid;
-    height: 55%;
-    margin-top: -40px;
+    height: 100%;
+    height: 338px;
+    margin-top: -65px;
     grid-template-columns: repeat(1, 3fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
   .header_nav .header_nav_res {
-    margin-top: 2.5rem;
+    margin-top: 30px;
     margin-left: 15%;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: bolder;
   }
   .header_nav .header_nav_res p {
     margin-left: 10%;
@@ -173,22 +173,22 @@ td, th {
   .header_nav .header_nav-box-dec {
     width: 100%;
     display: grid;
-    margin-left: 8%;
-    margin-top: 10px;
+    margin-left: 4%;
+    margin-top: 15px;
     font-size: larger;
     font-family: "Roboto Light",sans-serif;
   }
-  .header_nav .header_nav-box-dec h3 p {
+  .header_nav .header_nav-box-dec p {
     margin-left: 8%;
   }
   .header_nav .box_btn {
     background: linear-gradient(180deg, #FF79DA, #9356DC);
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 10px;
     box-shadow: 0 5px 5px -3px #333;
-    width: 60%;
-    margin-left: 20%;
-    height: 110%;
+    width: 235px;
+    margin-left: 15%;
+    height: 49px;
     border-radius: 30px;
     display: flex;
   }
@@ -203,21 +203,37 @@ td, th {
     transform: scale(1.015);
     transition-duration: 4s;
   }
+}
+
+@media only screen and (max-width: 650px) and (min-width: 651px) and (max-width: 800px) {
+  .wapper {
+    height: 2263px;
+  }
+  .header_nav {
+    color: yellow;
+  }
+  nav {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 650px) {
   nav {
     background-color: #FEFEFE;
     grid-area: nav;
-    margin-top: -76%;
+    margin-top: -50px;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
+    height: 509px;
   }
   nav .nav_box {
     width: 100%;
-    width: 100%;
+    height: 100px;
   }
   nav .nav_box .nav_box-fon {
     font-size: x-large;
-    margin-top: 12%;
+    margin-top: 40px;
     margin-left: 8%;
     font-weight: bold;
   }
@@ -257,7 +273,7 @@ td, th {
     opacity: 50%;
   }
   .box_un .mobile_choi {
-    margin-left: 1.8rem;
+    margin-left: 1.2rem;
     align-self: center;
     font-weight: bold;
   }
@@ -299,7 +315,7 @@ td, th {
     opacity: 50%;
   }
   .list_com {
-    margin-left: 1.8rem;
+    margin-left: 1.2rem;
     align-self: center;
     font-weight: bold;
   }
@@ -338,14 +354,14 @@ td, th {
     opacity: 50%;
   }
   .food_dug {
-    margin-left: 1.8rem;
+    margin-left: 1.2rem;
     align-self: center;
     font-weight: bold;
   }
   section {
     background-color: #f2f2f2;
     grid-area: section;
-    margin-top: -55%;
+    margin-top: -70px;
     display: grid;
     grid-template-rows: 0.2fr repeat(4, 1fr) 0.2fr;
     row-gap: 1rem;
@@ -353,7 +369,7 @@ td, th {
   section .restaurant {
     margin-top: 2rem;
     font-size: x-large;
-    margin-top: 12%;
+    margin-top: 40px;
     margin-left: 8%;
     font-weight: bold;
   }
@@ -378,8 +394,7 @@ td, th {
     width: 80px;
     border-radius: 3px;
     contain: paint;
-    margin-left: 72%;
-    margin-left: 72%;
+    margin-left: 70%;
     margin-top: -165px;
   }
   span {
@@ -390,9 +405,10 @@ td, th {
     font-weight: 500;
   }
   .section_box-pal {
-    display: grid;
+    line-height: 5px;
+    display: inline-grid;
     height: 60px;
-    margin-top: 45%;
+    margin-top: 150px;
   }
   strong {
     font-weight: bold;
@@ -443,11 +459,12 @@ td, th {
     width: 80px;
     border-radius: 3px;
     contain: paint;
-    margin-left: 72%;
-    margin-top: -53%;
+    margin-left: 70%;
+    margin-top: -165px;
   }
   .section_box-deux-not {
-    display: grid;
+    line-height: 5px;
+    display: inline-grid;
     height: 60px;
   }
   h2 {
@@ -483,7 +500,9 @@ td, th {
     height: 180px;
   }
   .section_box-trois-fran {
-    display: grid;
+    line-height: 5px;
+    display: inline-grid;
+    height: 60px;
   }
   .box_heart-trois {
     width: 29px;
@@ -514,7 +533,9 @@ td, th {
     height: 180px;
   }
   .section_box-quatre-sens {
-    display: grid;
+    line-height: 5px;
+    display: inline-grid;
+    height: 60px;
   }
   footer {
     grid-area: foot;
