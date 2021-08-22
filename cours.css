@@ -44,22 +44,24 @@ td, th {
   padding: 0;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   @font-face {
     font-family: "Roboto";
-    src: url("Roboto/Roboto light");
+    src: url("Roboto/Roboto-light");
   }
   body {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
-    font-family: 'Roboto',sans-serif;
+    font-family: "Roboto", sans-serif;
   }
+
   a {
     text-decoration: none;
     color: black;
   }
+
   .chargement {
     border: 10px solid #9356DC;
     /*création du loader*/
@@ -75,10 +77,24 @@ td, th {
     bottom: 0;
     left: 0;
     right: 0;
-    animation: spin 1.5s linear infinite;
-    animation-iteration-count: 3;
-    animation-fill-mode: forwards;
+    -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
+
+  @-webkit-keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+      visibility: hidden;
+    }
+  }
+
   @keyframes spin {
     0% {
       transform: rotate(0);
@@ -86,6 +102,16 @@ td, th {
     100% {
       transform: rotate(360deg);
       visibility: hidden;
+    }
+  }
+  @-webkit-keyframes wapper_slide {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
     }
   }
   @keyframes wapper_slide {
@@ -100,8 +126,10 @@ td, th {
   }
   .wapper {
     width: 100%;
-    animation-duration: 4s;
-    animation-name: wapper_slidenone;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-name: wapper_slidenone;
+            animation-name: wapper_slidenone;
     margin: auto;
     display: grid;
     height: 2248px;
@@ -110,6 +138,7 @@ td, th {
     border: 1px solid black;
     grid-template-areas: "header" " header_nav" "nav" "section" "foot";
   }
+
   header {
     display: grid;
     grid-area: header;
@@ -125,8 +154,9 @@ td, th {
     font-size: 30px;
     grid-area: 1/2;
     margin-top: 1.4rem;
-    font-family: 'Shrikhand',cursif;
+    font-family: "Shrikhand", cursif;
   }
+
   .header-box_lieu {
     background-color: #DCDCDC;
     width: 100%;
@@ -147,10 +177,11 @@ td, th {
     grid-area: 1/2;
     width: 150%;
     align-self: center;
-    font-family: "roboto",sans-serif;
+    font-family: "roboto", sans-serif;
     font-size: 15px;
     font-weight: 600;
   }
+
   .header_nav {
     background-color: #f2f2f2;
     grid-area: header_nav;
@@ -167,20 +198,38 @@ td, th {
     font-size: 24px;
     font-weight: bolder;
   }
+}
+@media screen and (max-width: 1000px) and (min-width: 480px) {
+  .header_nav .header_nav_res {
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 1000px) {
   .header_nav .header_nav_res p {
     margin-left: 10%;
   }
+}
+@media screen and (max-width: 1000px) {
   .header_nav .header_nav-box-dec {
     width: 100%;
     display: grid;
     margin-left: 4%;
     margin-top: 15px;
     font-size: larger;
-    font-family: "Roboto Light",sans-serif;
+    font-family: "Roboto Light", sans-serif;
   }
+}
+@media screen and (max-width: 1000px) and (min-width: 480px) {
+  .header_nav .header_nav-box-dec {
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 1000px) {
   .header_nav .header_nav-box-dec p {
     margin-left: 8%;
   }
+}
+@media screen and (max-width: 1000px) {
   .header_nav .box_btn {
     background: linear-gradient(180deg, #FF79DA, #9356DC);
     cursor: pointer;
@@ -192,6 +241,13 @@ td, th {
     border-radius: 30px;
     display: flex;
   }
+}
+@media screen and (max-width: 1000px) and (min-width: 480px) {
+  .header_nav .box_btn {
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 1000px) {
   .header_nav .box_btn .box_btn-btn {
     align-self: center;
     margin-left: 8%;
@@ -199,25 +255,14 @@ td, th {
     color: white;
     font-weight: 600;
   }
+}
+@media screen and (max-width: 1000px) {
   .header_nav .box_btn:hover {
     transform: scale(1.015);
     transition-duration: 4s;
   }
 }
-
-@media only screen and (max-width: 650px) and (min-width: 651px) and (max-width: 800px) {
-  .wapper {
-    height: 2263px;
-  }
-  .header_nav {
-    color: yellow;
-  }
-  nav {
-    color: red;
-  }
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   nav {
     background-color: #FEFEFE;
     grid-area: nav;
@@ -237,8 +282,10 @@ td, th {
     margin-left: 8%;
     font-weight: bold;
   }
+}
+@media screen and (max-width: 1000px) {
   .box_un {
-    margin-top: -7%;
+    margin-top: -20px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -277,9 +324,13 @@ td, th {
     align-self: center;
     font-weight: bold;
   }
+}
+@media screen and (max-width: 1000px) {
   .box_un:hover, .box_deux:hover, .box_trois:hover {
     background-color: rgba(147, 86, 220, 0.2);
   }
+}
+@media screen and (max-width: 1000px) {
   .box_deux {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -291,7 +342,7 @@ td, th {
     background-color: #f2f2f2;
     margin-left: 7%;
     display: flex;
-    margin-top: -16%;
+    margin-top: -55px;
   }
   .box_deux .box_deux-circle {
     width: 23px;
@@ -309,16 +360,22 @@ td, th {
     font-weight: bold;
     align-self: center;
   }
+}
+@media screen and (max-width: 1000px) {
   .list {
     margin-left: 8%;
     align-self: center;
     opacity: 50%;
   }
+}
+@media screen and (max-width: 1000px) {
   .list_com {
     margin-left: 1.2rem;
     align-self: center;
     font-weight: bold;
   }
+}
+@media screen and (max-width: 1000px) {
   .box_trois {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -330,7 +387,7 @@ td, th {
     background-color: #f2f2f2;
     margin-left: 7%;
     display: flex;
-    margin-top: -25%;
+    margin-top: -80px;
   }
   .box_trois .box_trois-circle {
     width: 23px;
@@ -348,16 +405,22 @@ td, th {
     font-weight: bold;
     align-self: center;
   }
+}
+@media screen and (max-width: 1000px) {
   .food {
     margin-left: 8%;
     align-self: center;
     opacity: 50%;
   }
+}
+@media screen and (max-width: 1000px) {
   .food_dug {
     margin-left: 1.2rem;
     align-self: center;
     font-weight: bold;
   }
+}
+@media screen and (max-width: 1000px) {
   section {
     background-color: #f2f2f2;
     grid-area: section;
@@ -373,6 +436,8 @@ td, th {
     margin-left: 8%;
     font-weight: bold;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box {
     background-color: #FEFEFE;
     width: 86%;
@@ -380,6 +445,8 @@ td, th {
     margin-left: 7%;
     border-radius: 20px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-img {
     display: flex;
     border-top-right-radius: 20px;
@@ -387,6 +454,8 @@ td, th {
     width: 100%;
     height: 180px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-nou {
     background: #99E2D0;
     height: 30px;
@@ -397,6 +466,8 @@ td, th {
     margin-left: 70%;
     margin-top: -165px;
   }
+}
+@media screen and (max-width: 1000px) {
   span {
     color: #066822;
     align-self: center;
@@ -404,21 +475,29 @@ td, th {
     font-size: 13px;
     font-weight: 500;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-pal {
     line-height: 5px;
     display: inline-grid;
     height: 60px;
     margin-top: 150px;
   }
+}
+@media screen and (max-width: 1000px) {
   strong {
     font-weight: bold;
     margin-left: 8px;
     margin-top: 10px;
   }
+}
+@media screen and (max-width: 1000px) {
   h2 {
     margin-left: 8px;
     display: grid;
   }
+}
+@media screen and (max-width: 1000px) {
   .box_heart {
     width: 29px;
     height: 25px;
@@ -431,11 +510,15 @@ td, th {
     border-radius: 50px;
     height: 27px;
   }
+}
+@media screen and (max-width: 1000px) {
   .heart:hover, .heart_deux-img:hover, .heart_trois-img:hover {
     cursor: pointer;
     transition: color 1s ease-out;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-deux {
     background-color: #FEFEFE;
     width: 86%;
@@ -452,6 +535,8 @@ td, th {
     height: 180px;
     grid-area: 3/1;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-deux-nou {
     background: #99E2D0;
     height: 30px;
@@ -462,14 +547,20 @@ td, th {
     margin-left: 70%;
     margin-top: -165px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-deux-not {
     line-height: 5px;
     display: inline-grid;
     height: 60px;
   }
+}
+@media screen and (max-width: 1000px) {
   h2 {
     margin-left: 8px;
   }
+}
+@media screen and (max-width: 1000px) {
   .box_heart-deux {
     width: 29px;
     height: 25px;
@@ -483,6 +574,8 @@ td, th {
     border-radius: 50px;
     height: 27px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-trois {
     background-color: #FEFEFE;
     width: 86%;
@@ -499,11 +592,15 @@ td, th {
     width: 100%;
     height: 180px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-trois-fran {
     line-height: 5px;
     display: inline-grid;
     height: 60px;
   }
+}
+@media screen and (max-width: 1000px) {
   .box_heart-trois {
     width: 29px;
     height: 25px;
@@ -517,6 +614,8 @@ td, th {
     border-radius: 50px;
     height: 27px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-quatre {
     background-color: #FEFEFE;
     width: 86%;
@@ -532,17 +631,23 @@ td, th {
     width: 100%;
     height: 180px;
   }
+}
+@media screen and (max-width: 1000px) {
   .section_box-quatre-sens {
     line-height: 5px;
     display: inline-grid;
     height: 60px;
   }
+}
+@media screen and (max-width: 1000px) {
   footer {
     grid-area: foot;
     width: 100%;
     height: 100%;
     background-color: #322f2f;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_box-logo {
     width: 150px;
     height: 30px;
@@ -553,13 +658,17 @@ td, th {
   .footer_box-logo .footer_logo {
     color: white;
     font-size: 17px;
-    font-family: 'Shrikhand',cursif;
+    font-family: "Shrikhand", cursif;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_list {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     margin-left: 10px;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_list-un, .footer_list-deux {
     font-weight: 600;
     font-size: 15px;
@@ -567,30 +676,41 @@ td, th {
     color: white;
     margin-top: -15px;
   }
+}
+@media screen and (max-width: 1000px) {
   .fa-hands-helping, .fa-utensils {
     color: white;
     margin-top: 20px;
     display: grid;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_box-list {
     margin-top: -5px;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_box-list-deux {
     margin-top: -16px;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_list-trois, .footer_contact {
     color: white;
     font-weight: 600;
     font-size: 15px;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_list-trois {
     width: 150px;
     margin-top: -8px;
   }
+}
+@media screen and (max-width: 1000px) {
   .footer_contact {
     display: grid;
     width: 150px;
     margin-top: -16px;
   }
 }
-/*# sourceMappingURL=cours.css.map */

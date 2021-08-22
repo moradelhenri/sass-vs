@@ -2,7 +2,7 @@
 
 
 
-@media screen and (max-width:650px){ 
+
  
  
   $color-primary:#FF79DA;
@@ -11,7 +11,7 @@ $color-tertiaire:#99E2D0;
 
 @font-face{
 font-family:"Roboto";
-src:url("Roboto/Roboto light");
+src:url("Roboto/Roboto-light");
 
 }
 body{margin: 0;
@@ -74,8 +74,24 @@ margin:auto;
    "header"" header_nav"
    "nav" "section"   
    "foot";
-   
+ 
+ @each $breakpoint, $value in $breakpoints{@media screen and (min-width: $value) 
+  { max-width: $value;
  }
+
+}
+}  
+
+$breakpoints:(
+  mobile: 368px, 
+ mobile phone: 480px,
+  tablet-up: 768px,
+  tablet-down:900px,
+   desktop-up:1024px,
+   );
+
+ 
+
 
  header{display: grid;   
   grid-area:header;
@@ -100,21 +116,23 @@ margin:auto;
   height:50px; 
   box-shadow:0 -5px 5px -5px #9E9E9E;  
  grid-template-columns:repeat(3, 1fr);
-.header-icon{grid-area: 1/2;
- margin-left: -2rem;
+ }
+ .fa-map-marker{ grid-area: 1/2;
+display:flex;
+contain: content;
+ background-color:red ;
+margin-left: 100px;
 align-self: center;
-height: 35%;
-width: 17%;
 &_lieu{grid-area:1/2;
 width: 150%;
 align-self: center;
 font-family:"roboto",sans-serif;
 font-size:15px;
 font-weight:600 ;
-}
-}
 
- }
+}
+  }
+
  .header_nav{background-color:#f2f2f2;
   grid-area: header_nav;
   display:grid ;
@@ -124,17 +142,22 @@ font-weight:600 ;
   grid-template-columns: repeat(1, 3fr);
  grid-template-rows:repeat(4, 1fr);
   .header_nav_res{
+ 
     margin-top: 30px; 
    margin-left:15%;
+
+  
  font-size:24px;
-  font-weight:bolder;
+  font-weight:bolder; 
 p{ margin-left:10%;
 
+ 
 } 
  }
  .header_nav-box-dec{width:100%;
  display: grid;  
   margin-left:4%;
+
   margin-top:15px; 
   font-size: larger;
   font-family:"Roboto Light",sans-serif; 
@@ -151,6 +174,7 @@ margin-top:10px;
 box-shadow: 0 5px 5px -3px #333;
 width: 235px;
 margin-left: 15%;
+@include mobile-only; 
 height:49px;
 border-radius: 30px;
 display:flex; 
@@ -176,36 +200,17 @@ margin-left:8%;
 font-weight:bold;
  
 }
-  @media only screen and (min-width:651px) and (max-width:800px){
-
-
-
-
-
-
- .wapper{ height:2263px;
-
- }
-  
  
-  .header_nav{ color:yellow;
- }
-
-nav{color:red;
-
-
-}
-
- }
 
 
 
 
 
 
- nav{background-color:#FEFEFE;   
+ nav {background-color:#FEFEFE;   
     grid-area: nav; 
    margin-top:-50px; 
+   width:100%;
      display:grid; 
      grid-template-rows:repeat(4, 1fr);
      grid-template-columns:1fr;
@@ -279,7 +284,7 @@ margin-left: -4%;
 .box_un { 
   
  
-margin-top: -7%;
+  margin-top: -20px;
 @include fonction-radius;
 .box_un-circle{
  @include circle; 
@@ -305,7 +310,7 @@ margin-top: -7%;
 }
 .box_deux{@include fonction-radius;
 
-margin-top: -16%;
+margin-top: -55px;
 .box_deux-circle{
   @include circle;
 span {@include span_circle;
@@ -319,7 +324,7 @@ span {@include span_circle;
 }
 
 .box_trois{@include fonction-radius;
-margin-top: -25%;
+margin-top:-80px;
   .box_trois-circle{
     @include circle;
     span {@include span_circle;
@@ -629,8 +634,7 @@ margin-top:-16px;
  }
 
 
-    
-}
+   
 
 
 
