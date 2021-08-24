@@ -145,9 +145,10 @@ margin-left:-20px;
  
 .header-icon_lieu{
 width: 150%;
+margin-left:8%;
 font-family:"roboto",sans-serif;
 font-size:15px;
-font-weight:600 ;
+font-weight:600;
 grid-area:1/2;
 display:grid;
 align-self:center;
@@ -170,32 +171,37 @@ align-self:center;
  grid-template-rows:repeat(4, 1fr);
   .header_nav_res{ 
     margin-top: 30px; 
-   margin-left:15%;  
+   margin-left:17%;  
  font-size:24px;
   font-weight:bolder;
   @include tablet-only{
     margin-left:34%;
   }
-}
-
-  p{ margin-left:8%;
-   
+  .header_nav_res-vou{ margin-left:13%;
+    display:grid;
+    @include tablet-only{
+      margin-left:8%;
+    } 
+ } 
  }
  .header_nav-box-dec{width:100%;
  display: grid;  
-  margin-left:4%;
+  margin-left:6%;
   margin-top:15px; 
   font-size: larger;
   font-family:"Roboto Light",sans-serif;
   @include tablet-only{
     margin-left:30%;
+  }
+ .dec{ margin-left:13%; 
+ display:grid;
+ @include tablet-only{
+  margin-left:6%;
 } 
-  
-  p{ margin-left:6%;
-    
-  
-}
+
  }
+}
+ 
 
  .box_btn{
   background:linear-gradient(180deg, $color-primary,$color-secondaire);
@@ -203,7 +209,7 @@ cursor:pointer;
 margin-top:10px;
 box-shadow: 0 5px 5px -3px #333;
 width: 235px;
-margin-left: 15%;
+margin-left: 17%;
 height:49px;
 border-radius: 30px;
 display:flex; 
@@ -439,16 +445,13 @@ row-gap: 1rem;
 
 .section_box-nou{
  @include boxnou;
-
-
-}
- span{color:#066822;
+ .section_nouveau{color:#066822;
 align-self:center ;
 margin-left:10px;
 font-size:13px;
 font-weight:500 ; 
 }
-
+}
 
   @mixin box_hearts{
     width: 29px;
@@ -540,6 +543,13 @@ display: grid;
 }
 .section_box-deux-nou {
    @include boxnou;
+   .sec_deu-nouveau{color:#066822;
+    align-self:center ;
+margin-left:10px;
+font-size:13px;
+font-weight:500 ; 
+
+   }
 
 }
 .section_box-deux-not{
