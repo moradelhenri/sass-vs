@@ -135,8 +135,11 @@ animation-name:wapper_slidenone;
  .fa-map-marker-alt{ 
   grid-area:1/2;
 display:grid;
-align-self:center; 
-margin-left:-20px;
+align-self:center;
+@media (min-width: 480px){
+  margin-left:1%; 
+ }     
+margin-left:-15px;
 @include tablet-only{
   margin-left:20%;
 }
@@ -150,6 +153,9 @@ font-family:"roboto",sans-serif;
 font-size:15px;
 font-weight:600;
 grid-area:1/2;
+@media (min-width: 480px){
+  margin-left:15%; 
+ }     
 display:grid;
 align-self:center;
 @include tablet-only{
@@ -161,6 +167,14 @@ align-self:center;
  
 }
 
+
+
+
+
+
+
+
+
  .header_nav{background-color:#f2f2f2;
   grid-area: header_nav;
   display:grid ;
@@ -171,13 +185,21 @@ align-self:center;
  grid-template-rows:repeat(4, 1fr);
   .header_nav_res{ 
     margin-top: 30px; 
-   margin-left:17%;  
+   margin-left:17%;
+   @media (min-width: 480px){
+    margin-left:24%; 
+   }     
  font-size:24px;
-  font-weight:bolder;
+  font-weight:bolder;   
   @include tablet-only{
-    margin-left:34%;
-  }
+    margin-left:34%;  
+}
+
+
   .header_nav_res-vou{ margin-left:13%;
+    @media (min-width: 480px){
+      margin-left:10%; 
+     }     
     display:grid;
     @include tablet-only{
       margin-left:8%;
@@ -189,11 +211,17 @@ align-self:center;
   margin-left:6%;
   margin-top:15px; 
   font-size: larger;
+  @media (min-width: 480px){
+    margin-left:16%; 
+   }     
   font-family:"Roboto Light",sans-serif;
   @include tablet-only{
     margin-left:30%;
   }
- .dec{ margin-left:13%; 
+ .dec{ margin-left:13%;
+  @media (min-width: 480px){
+    margin-left:10%; 
+   }      
  display:grid;
  @include tablet-only{
   margin-left:6%;
@@ -211,6 +239,9 @@ box-shadow: 0 5px 5px -3px #333;
 width: 235px;
 margin-left: 17%;
 height:49px;
+@media (min-width: 480px){
+  margin-left:25%; 
+ }     
 border-radius: 30px;
 display:flex; 
 @include tablet-only{
@@ -244,7 +275,6 @@ font-weight:bold;
 
 
 
-
  nav {background-color:#FEFEFE;   
     grid-area: nav; 
    margin-top:-50px; 
@@ -271,6 +301,9 @@ font-weight:bold;
    border-radius: 3px;
    contain:paint ;
    margin-left:70%;
+   @media (min-width: 480px){
+    margin-left:75%; 
+   }     
    margin-top:-165px;
    @include tablet-only{
     margin-left:85%;

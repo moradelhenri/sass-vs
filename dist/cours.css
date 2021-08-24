@@ -169,7 +169,12 @@ header .header-box .header-logo {
   grid-area: 1/2;
   display: grid;
   align-self: center;
-  margin-left: -20px;
+  margin-left: -15px;
+}
+@media (min-width: 480px) {
+  .header-box_lieu .fa-map-marker-alt {
+    margin-left: 1%;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-box_lieu .fa-map-marker-alt {
@@ -185,6 +190,11 @@ header .header-box .header-logo {
   grid-area: 1/2;
   display: grid;
   align-self: center;
+}
+@media (min-width: 480px) {
+  .header-box_lieu .header-icon_lieu {
+    margin-left: 15%;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-box_lieu .header-icon_lieu {
@@ -208,6 +218,11 @@ header .header-box .header-logo {
   font-size: 24px;
   font-weight: bolder;
 }
+@media (min-width: 480px) {
+  .header_nav .header_nav_res {
+    margin-left: 24%;
+  }
+}
 @media screen and (min-width: 768px) {
   .header_nav .header_nav_res {
     margin-left: 34%;
@@ -216,6 +231,11 @@ header .header-box .header-logo {
 .header_nav .header_nav_res .header_nav_res-vou {
   margin-left: 13%;
   display: grid;
+}
+@media (min-width: 480px) {
+  .header_nav .header_nav_res .header_nav_res-vou {
+    margin-left: 10%;
+  }
 }
 @media screen and (min-width: 768px) {
   .header_nav .header_nav_res .header_nav_res-vou {
@@ -230,6 +250,11 @@ header .header-box .header-logo {
   font-size: larger;
   font-family: "Roboto Light", sans-serif;
 }
+@media (min-width: 480px) {
+  .header_nav .header_nav-box-dec {
+    margin-left: 16%;
+  }
+}
 @media screen and (min-width: 768px) {
   .header_nav .header_nav-box-dec {
     margin-left: 30%;
@@ -238,6 +263,11 @@ header .header-box .header-logo {
 .header_nav .header_nav-box-dec .dec {
   margin-left: 13%;
   display: grid;
+}
+@media (min-width: 480px) {
+  .header_nav .header_nav-box-dec .dec {
+    margin-left: 10%;
+  }
 }
 @media screen and (min-width: 768px) {
   .header_nav .header_nav-box-dec .dec {
@@ -254,6 +284,11 @@ header .header-box .header-logo {
   height: 49px;
   border-radius: 30px;
   display: flex;
+}
+@media (min-width: 480px) {
+  .header_nav .box_btn {
+    margin-left: 25%;
+  }
 }
 @media screen and (min-width: 768px) {
   .header_nav .box_btn {
@@ -479,6 +514,11 @@ section .restaurant {
   margin-left: 70%;
   margin-top: -165px;
 }
+@media (min-width: 480px) {
+  .section_box-nou {
+    margin-left: 75%;
+  }
+}
 @media screen and (min-width: 768px) {
   .section_box-nou {
     margin-left: 85%;
@@ -555,6 +595,11 @@ h2 {
   contain: paint;
   margin-left: 70%;
   margin-top: -165px;
+}
+@media (min-width: 480px) {
+  .section_box-deux-nou {
+    margin-left: 75%;
+  }
 }
 @media screen and (min-width: 768px) {
   .section_box-deux-nou {
