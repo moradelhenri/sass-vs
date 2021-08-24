@@ -15,7 +15,7 @@ src:url("Roboto/Roboto-light");
 
 }
 body{
-  padding: 20px 0;
+  padding:20px 0; 
   height:100vh; 
    margin:auto;
     font-family:'Roboto',sans-serif;
@@ -82,7 +82,6 @@ animation-name:wapper_slidenone;
      desktop-up: 1024px,
      ); 
   
-    
      @each $breakpoint, $value in    
      
       $breakpoints{
@@ -94,6 +93,13 @@ animation-name:wapper_slidenone;
  }
    
  }
+
+
+
+
+
+
+  
  }
  $breakpoints:(
   tablet-up: 768px 
@@ -184,12 +190,15 @@ align-self:center;
   grid-template-columns: repeat(1, 3fr);
  grid-template-rows:repeat(4, 1fr);
   .header_nav_res{ 
-    margin-top: 30px; 
+    margin-top: 30px;
+    line-height:16px; 
+    font-family:"Roboto",sans-serif;
    margin-left:17%;
    @media (min-width: 480px){
     margin-left:24%; 
    }     
- font-size:24px;
+   font-size:24px;
+
   font-weight:bolder;   
   @include tablet-only{
     margin-left:34%;  
@@ -197,6 +206,7 @@ align-self:center;
 
 
   .header_nav_res-vou{ margin-left:13%;
+    margin-top:8px;
     @media (min-width: 480px){
       margin-left:10%; 
      }     
@@ -207,7 +217,8 @@ align-self:center;
  } 
  }
  .header_nav-box-dec{width:100%;
- display: grid;  
+ display: grid;
+ line-height:16px; 
   margin-left:6%;
   margin-top:15px; 
   font-size: larger;
@@ -361,6 +372,7 @@ margin-left: -4%;
   margin-top: -20px;
 @include fonction-radius;
 
+
 .box_un-circle{
  @include circle;
  @include tablet-only{
@@ -450,6 +462,7 @@ row-gap: 1rem;
  margin-left:7%;
  border-radius:20px;
 
+
 }
 
 @mixin section_img {
@@ -458,6 +471,7 @@ row-gap: 1rem;
   border-top-left-radius:20px;
   width:100% ;
   height: 180px;
+ contain:content; 
 }
 
 @mixin heart{border-radius:50px;   
@@ -472,6 +486,7 @@ row-gap: 1rem;
 .section_box-img{
   
  @include section_img;
+ 
 }
   
 

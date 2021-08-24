@@ -239,6 +239,8 @@ header .header-box .header-logo {
 }
 .header_nav .header_nav_res {
   margin-top: 30px;
+  line-height: 16px;
+  font-family: "Roboto", sans-serif;
   margin-left: 17%;
   font-size: 24px;
   font-weight: bolder;
@@ -255,6 +257,7 @@ header .header-box .header-logo {
 }
 .header_nav .header_nav_res .header_nav_res-vou {
   margin-left: 13%;
+  margin-top: 8px;
   display: grid;
 }
 @media (min-width: 480px) {
@@ -270,6 +273,7 @@ header .header-box .header-logo {
 .header_nav .header_nav-box-dec {
   width: 100%;
   display: grid;
+  line-height: 16px;
   margin-left: 6%;
   margin-top: 15px;
   font-size: larger;
@@ -527,6 +531,7 @@ section .restaurant {
   border-top-left-radius: 20px;
   width: 100%;
   height: 180px;
+  contain: content;
 }
 
 .section_box-nou {
