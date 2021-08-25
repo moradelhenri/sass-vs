@@ -69,17 +69,28 @@ animation-name:wapper_slidenone;
     display: grid;
    height:2248px; 
     grid-template-columns: 1fr;
-   grid-template-rows:1fr 1fr 2fr 6fr 1fr ;
+   grid-template-rows:1fr 1fr 2fr 6fr 1fr;
    border: 1px solid black;
    grid-template-areas:
    "header"" header_nav"
    "nav" "section"   
    "foot";
+   @media (min-width: 1010px){
+    grid-template-rows:1fr 1fr 1fr 2fr 1fr;
+  
+
+   
+   }
+   
+   
    $breakpoints:(mobile:375px,
      mobile phone: 480px,
    tablet-up: 768px,
     tablet-down: 900px,
      desktop-up: 1024px,
+     destop: 1280px,
+     HD laptops:1366px,
+     MacBook:1440px,
      ); 
   
      @each $breakpoint, $value in    
@@ -92,15 +103,13 @@ animation-name:wapper_slidenone;
 
  }
    
- }
-
-
+}
 
 
 
 
   
- }
+ } 
  $breakpoints:(
   tablet-up: 768px 
  );
@@ -119,6 +128,7 @@ animation-name:wapper_slidenone;
   width: 100%; 
   margin-top: 0.3rem;
  grid-template-rows:repeat(2, 1fr);
+ 
 .header-box{background-color:#FEFEFE;
   display: grid;
 .header-logo{
@@ -126,6 +136,9 @@ animation-name:wapper_slidenone;
  grid-area: 1/2;
  margin-top: 1.4rem;
  font-family :'Shrikhand',cursif;
+ 
+
+
 }
 }
 }
@@ -136,7 +149,10 @@ animation-name:wapper_slidenone;
   height:50px; 
   box-shadow:0 -5px 5px -5px #9E9E9E;  
  grid-template-columns:repeat(3, 1fr);
- 
+ @media (min-width:1024px){
+  margin-top:0;
+
+  }
 
  .fa-map-marker-alt{ 
   grid-area:1/2;
@@ -148,9 +164,12 @@ align-self:center;
 margin-left:-15px;
 @include tablet-only{
   margin-left:20%;
+  @media (min-width:1024px){ 
+    margin-left:28%;
 }
 
- } 
+ }
+} 
  
 .header-icon_lieu{
 width: 150%;
@@ -160,19 +179,22 @@ font-size:15px;
 font-weight:600;
 grid-area:1/2;
 @media (min-width: 480px){
-  margin-left:15%; 
- }     
+  margin-left:15%;  
+}    
 display:grid;
 align-self:center;
 @include tablet-only{
   margin-left:28%;
+  @media (min-width:1024px){ 
+  margin-left:35%;
+  }
+
 }
  
 
 }
  
 }
-
 
 
 
@@ -189,21 +211,27 @@ align-self:center;
   margin-top:-65px; 
   grid-template-columns: repeat(1, 3fr);
  grid-template-rows:repeat(4, 1fr);
+ @media (min-width: 1024px){
+  margin-top:-45px;
+ }
+
   .header_nav_res{ 
     margin-top: 30px;
-    line-height:16px; 
+  line-height: 15px;
     font-family:"Roboto",sans-serif;
    margin-left:17%;
    @media (min-width: 480px){
     margin-left:24%; 
    }     
-   font-size:24px;
+   font-size:24px; 
 
   font-weight:bolder;   
   @include tablet-only{
     margin-left:34%;  
 }
-
+@media (min-width:1024px){ 
+  margin-left:38%;
+}
 
   .header_nav_res-vou{ margin-left:13%;
     margin-top:8px;
@@ -218,7 +246,7 @@ align-self:center;
  }
  .header_nav-box-dec{width:100%;
  display: grid;
- line-height:16px; 
+
   margin-left:6%;
   margin-top:15px; 
   font-size: larger;
@@ -228,6 +256,9 @@ align-self:center;
   font-family:"Roboto Light",sans-serif;
   @include tablet-only{
     margin-left:30%;
+   @media (min-width:1024px){ 
+    margin-left:35%;
+    } 
   }
  .dec{ margin-left:13%;
   @media (min-width: 480px){
@@ -257,10 +288,13 @@ border-radius: 30px;
 display:flex; 
 @include tablet-only{
   margin-left:35%;
+  @media (min-width:1024px){ 
+    margin-left:38%;
+  }  
 } 
  .box_btn-btn{
 align-self: center;
-margin-left:8%;
+margin-left:10%;
 display: inline;
 color: white;
 font-weight: 600;
@@ -318,6 +352,10 @@ font-weight:bold;
    margin-top:-165px;
    @include tablet-only{
     margin-left:85%;
+    @media (min-width:1024px){ 
+      margin-top:-80%;
+   margin-left:80% ;   
+    }
 }  
  }
  
@@ -436,6 +474,17 @@ margin-top:-80px;
 
  }
 
+@mixin section_box_destop{
+  height:510px;
+  width:100%;
+  margin-left:0%;  
+  
+}
+@mixin section_img_destop{  
+  height: 430px;
+  width: 100%;
+}
+
 
  section{  background-color: #f2f2f2;
  grid-area: section;
@@ -443,6 +492,12 @@ margin-top:-70px;
 display: grid;
 grid-template-rows:0.2fr repeat(4, 1fr)0.2fr;
 row-gap: 1rem;
+@media (min-width: 1024px){
+
+  grid-template-rows:80px 1fr 1fr 30px;
+grid-template-columns: repeat(2 , 1fr) ;
+column-gap:1rem;
+}
 .restaurant{margin-top:2rem;
 @include titre_nav-sec;
 
@@ -458,11 +513,13 @@ row-gap: 1rem;
  background-color:#FEFEFE;
  width:86%;
  height: 257px;
+margin-left: 7%;
 
- margin-left:7%;
  border-radius:20px;
-
-
+ @media (min-width: 1024px){
+grid-area: 2/1;
+@include section_box_destop;
+ }
 }
 
 @mixin section_img {
@@ -470,8 +527,8 @@ row-gap: 1rem;
   border-top-right-radius:20px;
   border-top-left-radius:20px;
   width:100% ;
-  height: 180px;
- contain:content; 
+  height: 180px;  
+ object-fit:cover;
 }
 
 @mixin heart{border-radius:50px;   
@@ -483,13 +540,13 @@ row-gap: 1rem;
 
 
 
-.section_box-img{
-  
+.section_box-img{  
  @include section_img;
- 
+ @media (min-width: 1024px){
+ @include  section_img_destop;  
 }
   
-
+}
 
 .section_box-nou{
  @include boxnou;
@@ -514,7 +571,9 @@ font-weight:500 ;
 .section_box-pal{
 @include section_box_h1;
 margin-top:150px;
-
+@media (min-width:1024px){ 
+  margin-top:76%; 
+}
 }
 
 strong{ font-weight:bold ;
@@ -579,16 +638,22 @@ display: grid;
  height: 180px;
 }
 .section_box-deux{
-@include section_box-s; 
-
+@include section_box-s;
+@media (min-width: 1024px){
+  grid-area: 2/2;
+  @include section_box_destop;
+}
 .section_box-deux-img{ @include section_img;
-
-
  grid-area:3/1;
+ @media (min-width: 1024px){
+  @include  section_img_destop;  
+ }
 
 }
 
 }
+
+
 .section_box-deux-nou {
    @include boxnou;
    .sec_deu-nouveau{color:#066822;
@@ -601,15 +666,7 @@ font-weight:500 ;
 
 }
 .section_box-deux-not{
-  @include section_box_h1;
-  
-
-
-
- 
-
-
-  
+  @include section_box_h1;  
 }
  h2{margin-left:8px;
 
@@ -629,9 +686,17 @@ font-weight:500 ;
 .section_box-trois{
   @include section_box-s;  
   grid-area:4/1;
+  @media (min-width: 1024px){
+    grid-area: 3/1;
+    @include section_box_destop;
+
+  }
 .section_box-trois-img{
   @include section_img;
- 
+  @media (min-width: 1024px){
+    @include  section_img_destop;  
+   }
+
 }
 }
 .section_box-trois-fran{
@@ -647,15 +712,22 @@ font-weight:500 ;
    .heart_trois-img{
     margin-top:1px;
  @include heart;
-
+  
 }
 
 }
 
 .section_box-quatre{
   @include section_box-s;
+  @media (min-width: 1024px){
+    grid-area: 3/2;
+    @include section_box_destop;
+  }
  .section_box-quatre-img {
-  @include section_img;   
+  @include section_img; 
+  @media (min-width: 1024px){
+    @include  section_img_destop;  
+   }   
  }
    
 }

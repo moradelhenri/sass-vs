@@ -112,6 +112,13 @@ a {
   border: 1px solid black;
   grid-template-areas: "header" " header_nav" "nav" "section" "foot";
 }
+@media (min-width: 1010px) {
+  .wapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr 2fr 1fr;
+    grid-template-areas: "header" " header_nav" "nav" "section" "section" "foot";
+  }
+}
 @media screen and (min-width: 375px) {
   .wapper {
     max-width: 375px;
@@ -144,6 +151,13 @@ header {
   width: 100%;
   margin-top: 0.3rem;
   grid-template-rows: repeat(2, 1fr);
+}
+@media (min-width: 1010px) {
+  header {
+    background-color: red;
+    width: 100%;
+    display: grid;
+  }
 }
 header .header-box {
   background-color: #FEFEFE;
