@@ -670,7 +670,7 @@ section .restaurant {
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .section_box-nou {
-    margin-top: -80%;
+    margin-top: -400px;
     margin-left: 80%;
   }
 }
@@ -692,7 +692,7 @@ section .restaurant {
 
 @media (min-width: 1024px) {
   .section_box-pal {
-    margin-top: 76%;
+    margin-top: 380px;
   }
 }
 
@@ -786,7 +786,7 @@ h2 {
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .section_box-deux-nou {
-    margin-top: -80%;
+    margin-top: -400px;
     margin-left: 80%;
   }
 }

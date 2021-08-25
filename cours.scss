@@ -353,7 +353,7 @@ font-weight:bold;
    @include tablet-only{
     margin-left:85%;
     @media (min-width:1024px){ 
-      margin-top:-80%;
+      margin-top:-400px;
    margin-left:80% ;   
     }
 }  
@@ -572,7 +572,7 @@ font-weight:500 ;
 @include section_box_h1;
 margin-top:150px;
 @media (min-width:1024px){ 
-  margin-top:76%; 
+  margin-top:380px;
 }
 }
 
