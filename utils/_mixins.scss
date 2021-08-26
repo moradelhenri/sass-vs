@@ -1,0 +1,135 @@
+@mixin tablet-only  {
+    @media screen and (min-width: map-get($breakpoints,tablet-up)){   
+     @content;
+        
+    }
+   }
+   @mixin titre_nav-sec{ 
+    font-size: x-large;
+  margin-top:40px;
+  margin-left:8%;
+  font-weight:bold;   
+  }
+  @mixin boxnou{  
+    background:$color-tertiaire;
+    height:30px;  
+    display:grid;
+     width:80px; 
+     border-radius: 3px;
+     contain:paint ;
+     margin-left:70%;
+     @media (min-width: 480px){
+      margin-left:75%; 
+     }       
+     margin-top:-165px;
+     @include tablet-only{
+      margin-left:85%;
+      @media (min-width:1024px){ 
+        margin-top:-400px;
+     margin-left:80% ;   
+      }
+  }  
+   }
+   @mixin fonction-radius{   
+
+    border-bottom-left-radius:30px;
+      border-bottom-right-radius:30px;
+      border-top-left-radius:30px;
+      border-top-right-radius:30px;
+      box-shadow: 0px 5px 5px -3px #333; 
+      width: 85%;
+      height: 55%;
+      background-color: #f2f2f2;
+      margin-left:7%;
+      display: flex;
+     }
+     
+    @mixin circle {width: 23px;
+      height: 23px;
+    display: grid;
+    align-self: center;
+    margin-left: -4%;
+      background-color:$color-secondaire;
+      border-radius:20px;
+      
+    }
+    @mixin span_circle {
+      margin-left:35%;
+      color:white;
+      font-size:12px;
+      font-weight: bold;
+      align-self: center; 
+      
+    }
+    @mixin icon_center{
+        margin-left: 8%;
+        align-self:center;
+        opacity: 50%;
+      
+      }
+      @mixin phrase_box {
+        margin-left:1.2rem;
+        align-self: center;
+        font-weight: bold;
+        
+      }
+      
+@mixin section_box_destop{
+    height:510px;
+    width:100%;
+    margin-left:0%;  
+    
+  }
+  @mixin section_img_destop{  
+    height: 430px;
+    width: 100%;
+  }
+  @mixin section_box_h1{
+    line-height:5px;
+    display:inline-grid;
+    height:60px;
+  }
+  @mixin section_img {
+    display: flex;
+   border-top-right-radius:20px;
+   border-top-left-radius:20px;
+   width:100% ;
+   height: 180px;  
+  object-fit:cover;
+ }
+ 
+ @mixin heart{border-radius:50px;   
+   height: 27px;  
+ }
+ @mixin box_hearts{
+    width: 29px;
+   height: 25px;
+   background-color: #FFF;
+   display: grid;
+   margin-left:85% ;
+   margin-top:-45px;
+ }
+ @mixin heart_hover{ cursor: pointer;
+    transition: color 1s ease-out;
+      background:-webkit-gradient(linear, 
+       left top, left bottom,
+       from($color-secondaire), to($color-primary));   
+ }
+ @mixin section_box-s{
+    background-color:#FEFEFE;
+   width:86%;
+   height: 257px;
+ display: grid;
+   margin-left:7%;
+   border-radius:20px;
+  
+   
+   
+ }
+ @mixin section_img {
+   display: flex;
+  border-top-right-radius:20px;
+  border-top-left-radius:20px;
+  width:100% ;
+  height: 180px;
+ }

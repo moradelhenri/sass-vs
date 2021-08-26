@@ -1,0 +1,48 @@
+.wapper{ width: 100%;
+    animation-duration:4s;
+    animation-name:wapper_slide;
+     margin:0 auto;
+        display: grid;
+       height:2248px; 
+        grid-template-columns: 1fr;
+       grid-template-rows:1fr 1fr 2fr 6fr 1fr;
+       border: 1px solid black;
+       grid-template-areas:
+       "header"" header_nav"
+       "nav" "section"   
+       "foot";
+       @media (min-width: 1010px){
+        grid-template-rows:1fr 1fr 1fr 2fr 1fr;
+              
+       }
+       $breakpoints:(mobile:375px,
+       mobile phone: 480px,
+     tablet-up: 768px,
+      tablet-down: 900px,
+       desktop-up: 1024px,
+       destop: 1280px,
+       HD laptops:1366px,
+       MacBook:1440px,
+       ); 
+    
+       @each $breakpoint, $value in    
+       
+        $breakpoints{
+   
+   
+   @media screen and (min-width: $value){
+      max-width: $value;
+  
+   }
+     
+  }
+  
+  
+  
+  
+    
+   } 
+   $breakpoints:(
+    tablet-up: 768px 
+   );
+   
