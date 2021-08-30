@@ -110,7 +110,7 @@
    margin-top:-45px;
  }
  @mixin heart_hover{ cursor: pointer;
-    transition: color 1s ease-out;
+  transition: all 1s ease-out;
       background:-webkit-gradient(linear, 
        left top, left bottom,
        from($color-secondaire), to($color-primary));   
