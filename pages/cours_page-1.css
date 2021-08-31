@@ -67,8 +67,7 @@ section .section_page {
 
 section .section_page .section__page_lap {
   margin-top: 40px;
-  font-family: 'Shrikhand', cursif,sans-serif;
-  font-size: 24px;
+  font-family: 'Shrikhand',cursif;
   margin-left: 10px;
 }
 
@@ -86,8 +85,8 @@ section .heart {
 }
 
 section .fa-heart {
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 10px;
+  margin-left: 35px;
   font-size: 23px;
 }
 
@@ -136,8 +135,7 @@ section .section_box__ent .ent {
   margin-top: 10px;
   margin-left: 10px;
   font-family: 'Roboto';
-  font-weight: 900;
-  display: grid;
+  font-weight: bold;
 }
 
 .menu_entrée .box_art-un .section_art-asi {
@@ -148,7 +146,8 @@ section .section_box__ent .ent {
 
 .menu_entrée .box_art-un .section_art-asi .aside_price {
   margin-left: 150px;
-  font-weight: 900;
+  font-weight: bold;
+  display: inline-block;
 }
 
 nav {

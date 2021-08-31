@@ -28,7 +28,7 @@ width: 100%;
   
     
 }
-@mixin heart_hover{ 
+@mixin heart__hover{ 
   cursor: pointer;
   transition: all 1s ease-out;
     background: -webkit-gradient(linear, left top, left bottom,
@@ -66,7 +66,7 @@ header{
    grid-area: 1/2;
    margin-left:-30px;
    font-family :'Shrikhand',cursif;
-
+   
   }
 
 }
@@ -90,10 +90,13 @@ border-top-right-radius: 20px;
    grid-template-rows:1fr 1fr;
    grid-template-columns:2fr 1fr; 
 .section__page_lap{margin-top:40px;
-  font-family : 'Shrikhand', cursif,sans-serif ;
-  font-size:24px;
+  font-family :'Shrikhand',cursif;
+
+ 
   margin-left: 10px;
+
 }
+
 }
    .section_heart{
  
@@ -111,15 +114,15 @@ border-top-right-radius: 20px;
  }
 
   .fa-heart{
-    margin-top: 5px;
-    margin-left:5px;    
+    margin-top: 10px;
+    margin-left:35px;    
     font-size:23px;
   }
   .fa-heart:hover { 
-   @include heart_hover
+   @include heart__hover;
   }
     
-      
+
     
    
      
@@ -146,13 +149,13 @@ margin-left:10px;
 
 .menu_entrée{
  
-border: 1px solid black;
+border:1px solid black;
 @include width-display;
 margin-top:-385px;
 margin-left:10px;
 margin-right:10px;
 .box_art-un{
- display: grid;
+display: grid;
   height: 65px;
  border: 1px solid black;
 border-radius:20px;
@@ -163,14 +166,16 @@ grid-template-rows: 25px 20px;
 margin-top: 10px;
  margin-left: 10px;
 font-family:'Roboto';
-font-weight:900;
-display: grid;
+font-weight:bold;
+
+
 }
 .section_art-asi{ margin-top: 10px;
   margin-left:10px;
  font-size:17px ;
  .aside_price{margin-left:150px;
-  font-weight:900;
+  font-weight:bold;
+ display:inline-block;
  }
  
 
