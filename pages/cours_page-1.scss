@@ -48,8 +48,18 @@ grid-template-rows: 25px 20px;
 
 }
 
-
-
+@mixin artilcle-h4{
+  margin-top: 10px;
+  margin-left: 10px;
+ font-family:'Roboto';
+ font-weight:bold;
+  
+}
+@mixin aside_setion123{
+  margin-top: 10px;
+  margin-left:10px;
+ font-size:17px ;
+}
 
 
     .wapper{@include width-display;
@@ -161,19 +171,14 @@ margin-right:10px;
   @include box-article;
 
 .section_article-h4{
-margin-top: 10px;
- margin-left: 10px;
-font-family:'Roboto';
-font-weight:bold;
+  @include artilcle-h4;
 
 }
 
-.section_art-asi{ margin-top: 10px;
-  margin-left:10px;
- font-size:17px ;
+.section_art-asi{ @include aside_setion123;
  .aside_price{margin-left:150px;
   font-weight:bold;
- display:inline-block;
+
  }
 }
 
@@ -184,20 +189,23 @@ font-weight:bold;
  @include box-article;
  margin-top:-330px;
 
- .section_article-foi{margin-top: 10px;
-  margin-left: 10px;
- font-family:'Roboto';
- font-weight:bold;
-
+ .section_article-foi{
+@include artilcle-h4;
  }
 
-
-
-
-
-
+.section_art-deux{
+  @include aside_setion123;
+ 
+.aside_price2{
+  margin-left:300px;
+display:grid;
+ margin-top: -20px; 
+ font-weight:bold; 
+}
+}
 
 }
+
 
 }
 

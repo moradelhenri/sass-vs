@@ -147,7 +147,6 @@ section .menu_entrée .box_art-un .section_art-asi {
 section .menu_entrée .box_art-un .section_art-asi .aside_price {
   margin-left: 150px;
   font-weight: bold;
-  display: inline-block;
 }
 
 section .menu_entrée .box_art-deux {
@@ -164,6 +163,19 @@ section .menu_entrée .box_art-deux .section_article-foi {
   margin-top: 10px;
   margin-left: 10px;
   font-family: 'Roboto';
+  font-weight: bold;
+}
+
+section .menu_entrée .box_art-deux .section_art-deux {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+section .menu_entrée .box_art-deux .section_art-deux .aside_price2 {
+  margin-left: 300px;
+  display: grid;
+  margin-top: -20px;
   font-weight: bold;
 }
 
