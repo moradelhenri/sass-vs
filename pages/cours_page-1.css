@@ -68,7 +68,7 @@ section .section_page {
 section .section_page .section__page_lap {
   margin-top: 40px;
   font-family: 'Shrikhand',cursif;
-  margin-left: 10px;
+  font-style: unset;
 }
 
 section .section_heart {
