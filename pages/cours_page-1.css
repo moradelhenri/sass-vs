@@ -53,8 +53,9 @@ section {
   width: 100%;
   display: grid;
   background-color: #f2f2f2;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -20px;
 }
 
 section .section_page {
@@ -68,7 +69,7 @@ section .section_page {
 section .section_page .section__page_lap {
   margin-top: 40px;
   font-family: 'Shrikhand',cursif;
-  font-style: unset;
+  font-stretch: 200%;
 }
 
 section .section_heart {
@@ -112,7 +113,7 @@ section .section_box__ent .ent {
   margin-top: 10px;
 }
 
-.menu_entrée {
+section .menu_entrée {
   border: 1px solid black;
   width: 100%;
   display: grid;
@@ -121,33 +122,49 @@ section .section_box__ent .ent {
   margin-right: 10px;
 }
 
-.menu_entrée .box_art-un {
+section .menu_entrée .box_art-un {
   display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
-  background-color: #FEFEFE;
   grid-template-rows: 25px 20px;
 }
 
-.menu_entrée .box_art-un .section_article-h4 {
+section .menu_entrée .box_art-un .section_article-h4 {
   margin-top: 10px;
   margin-left: 10px;
   font-family: 'Roboto';
   font-weight: bold;
 }
 
-.menu_entrée .box_art-un .section_art-asi {
+section .menu_entrée .box_art-un .section_art-asi {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 17px;
 }
 
-.menu_entrée .box_art-un .section_art-asi .aside_price {
+section .menu_entrée .box_art-un .section_art-asi .aside_price {
   margin-left: 150px;
   font-weight: bold;
   display: inline-block;
+}
+
+section .menu_entrée .box_art-deux {
+  display: grid;
+  height: 65px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-right: 10px;
+  grid-template-rows: 25px 20px;
+  margin-top: -330px;
+}
+
+section .menu_entrée .box_art-deux .section_article-foi {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 'Roboto';
+  font-weight: bold;
 }
 
 nav {

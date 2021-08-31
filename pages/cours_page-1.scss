@@ -38,6 +38,20 @@ width: 100%;
     font-weight:bold;
 }
 
+@mixin box-article{display: grid;
+  height: 65px;
+ border: 1px solid black;
+border-radius:20px;
+margin-right:10px;
+
+grid-template-rows: 25px 20px;
+
+}
+
+
+
+
+
     .wapper{@include width-display;
     height: 1641px;
     grid-template-rows:80px 1fr 4fr 1fr 1fr;
@@ -81,9 +95,9 @@ section{border:1px solid black;
    grid-area:section;
  @include width-display;
 background-color:#f2f2f2; 
-border-top-left-radius:20px;
-border-top-right-radius: 20px;
- 
+border-top-left-radius:30px;
+border-top-right-radius: 30px;
+ margin-top: -20px; 
 .section_page{
    height: 150px;
    @include width-display;
@@ -91,9 +105,8 @@ border-top-right-radius: 20px;
    grid-template-columns:2fr 1fr; 
 .section__page_lap{margin-top:40px;
   font-family:'Shrikhand',cursif;
- font-style:unset;
+font-stretch: 200%;
 }
-
 }
    .section_heart{
  
@@ -117,15 +130,8 @@ border-top-right-radius: 20px;
   }
   .fa-heart:hover { 
    @include heart__hover;
+    
   }
-    
-
-    
-   
-     
- 
-
-
 .section_box__ent{
   width: 100px;
   height:30px;  
@@ -142,7 +148,7 @@ margin-left:10px;
 
 }
 
-}
+
 
 .menu_entrée{
  
@@ -152,21 +158,16 @@ margin-top:-385px;
 margin-left:10px;
 margin-right:10px;
 .box_art-un{
-display: grid;
-  height: 65px;
- border: 1px solid black;
-border-radius:20px;
-margin-right:10px;
-background-color:#FEFEFE;
-grid-template-rows: 25px 20px;
+  @include box-article;
+
 .section_article-h4{
 margin-top: 10px;
  margin-left: 10px;
 font-family:'Roboto';
 font-weight:bold;
 
-
 }
+
 .section_art-asi{ margin-top: 10px;
   margin-left:10px;
  font-size:17px ;
@@ -174,13 +175,31 @@ font-weight:bold;
   font-weight:bold;
  display:inline-block;
  }
- 
-
 }
 
 }
 
 
+.box_art-deux{
+ @include box-article;
+ margin-top:-330px;
+
+ .section_article-foi{margin-top: 10px;
+  margin-left: 10px;
+ font-family:'Roboto';
+ font-weight:bold;
+
+ }
+
+
+
+
+
+
+
+}
+
+}
 
 }
 
