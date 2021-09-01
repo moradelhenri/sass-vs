@@ -33,7 +33,7 @@ width: 100%;
   transition: all 1s ease-out;
     background: -webkit-gradient(linear, left top, left bottom,
      from($color-secondaire), to($color-primary));
-   background-clip: text;
+  -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;         
     font-weight:bold;
 }
@@ -138,12 +138,16 @@ font-stretch: 200%;
   }
  .heart{width: 28px;
   height: auto;
+
  }
 
   .fa-heart{
     margin-top: 10px;
     margin-left:35px;    
     font-size:23px;
+    .fa-heart::before {
+      content: "\f004";
+    }
   }
   .fa-heart:hover { 
    @include heart__hover;
