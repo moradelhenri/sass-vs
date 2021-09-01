@@ -148,10 +148,23 @@ section .menu_entrée .section__animation {
 }
 
 section .menu_entrée .section__animation .section__animation-rond {
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  display: grid;
   border: 1px solid black;
+  margin-left: 20px;
   align-self: center;
+  background-color: white;
+}
+
+section .menu_entrée .section__animation .section__animation-rond span {
+  font-size: 20px;
+  align-self: center;
+  font-weight: 900;
+  color: #99e2d0;
+  font-family: "Roboto";
+  margin-left: 5px;
 }
 
 section .menu_entrée .section_article-h4 {

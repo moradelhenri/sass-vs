@@ -197,10 +197,22 @@ height:230px ;
  border-top-right-radius:20px ;
  width:60px;
  
- .section__animation-rond{ width: 10px;
-  height: 10px;
+ .section__animation-rond{ width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  display: grid;
    border:1px solid black;
+   margin-left: 20px;
    align-self: center;
+  background-color: white;
+  span{ font-size:20px;
+ 
+    align-self: center;
+    font-weight:900;
+    color:#99e2d0; 
+    font-family:"Roboto";
+    margin-left: 5px;
+  }
  }
   }
   
