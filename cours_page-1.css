@@ -23,20 +23,23 @@ header {
   margin-top: 0.3rem;
   grid-template-rows: 60px 250px;
 }
+
 header .header-box {
   background-color: #FEFEFE;
   display: grid;
   margin-top: -8px;
 }
+
 header .header-box .acueil {
   align-self: center;
   margin-left: 20px;
 }
+
 header .header-box .header-logo {
   font-size: 30px;
   grid-area: 1/2;
   margin-left: -30px;
-  font-family: "Shrikhand", cursif;
+  font-family: 'Shrikhand',cursif;
 }
 
 .header_img-pal {
@@ -52,8 +55,8 @@ section {
   background-color: #f2f2f2;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  margin-top: -20px;
 }
+
 section .section_page {
   height: 150px;
   width: 100%;
@@ -61,11 +64,13 @@ section .section_page {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
 }
+
 section .section_page .section__page_lap {
   margin-top: 40px;
-  font-family: "Shrikhand", cursif;
+  font-family: 'Shrikhand',cursif;
   font-stretch: 200%;
 }
+
 section .section_heart {
   width: 28px;
   height: 30px;
@@ -73,24 +78,27 @@ section .section_heart {
   margin-top: 35px;
   margin-left: 26px;
 }
+
 section .heart {
   width: 28px;
   height: auto;
 }
+
 section .fa-heart {
   margin-top: 10px;
   margin-left: 35px;
   font-size: 23px;
 }
+
 section .fa-heart:hover {
   cursor: pointer;
   transition: all 1s ease-out;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
+
 section .section_box__ent {
   width: 100px;
   height: 30px;
@@ -99,9 +107,11 @@ section .section_box__ent {
   width: 43px;
   margin-left: 10px;
 }
+
 section .section_box__ent .ent {
   margin-top: 10px;
 }
+
 section .menu_entrée {
   border: 1px solid black;
   width: 100%;
@@ -111,84 +121,123 @@ section .menu_entrée {
   margin-right: 10px;
   height: 230px;
 }
+
 section .menu_entrée .box_art-un {
   display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
+  background-color: #fff;
   grid-template-rows: 25px 20px;
+  box-shadow: 3px 3px 10px #dedada;
+  cursor: pointer;
+  grid-template-columns: 250px 1fr 1fr;
 }
-section .menu_entrée .box_art-un .section_article-h4 {
+
+section .menu_entrée .section__animation {
+  display: grid;
+  grid-area: 2/4;
+  background-color: #99e2d0;
+  margin-left: 20px;
+  margin-top: -25px;
+  height: 65px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 60px;
+}
+
+section .menu_entrée .section__animation .section__animation-rond {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  align-self: center;
+}
+
+section .menu_entrée .section_article-h4 {
   margin-top: 10px;
   margin-left: 10px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: bold;
 }
-section .menu_entrée .box_art-un .section_art-asi {
+
+section .menu_entrée .section_art-asi {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 17px;
+  grid-area: 2/1;
 }
-section .menu_entrée .box_art-un .section_art-asi .aside_price {
+
+section .menu_entrée .section_art-asi .aside_price {
   margin-left: 300px;
   display: grid;
   margin-top: -20px;
   font-weight: bold;
 }
-section .menu_entrée .box_art-deux {
+
+section .box_art-deux {
   display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
+  background-color: #fff;
   grid-template-rows: 25px 20px;
   margin-top: 15px;
 }
-section .menu_entrée .box_art-deux .section_article-foi {
+
+section .box_art-deux .section_article-foi {
   margin-top: 10px;
   margin-left: 10px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: bold;
 }
-section .menu_entrée .box_art-deux .section_art-deux {
+
+section .box_art-deux .section_art-deux {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 17px;
 }
-section .menu_entrée .box_art-deux .section_art-deux .aside_price2 {
+
+section .box_art-deux .section_art-deux .aside_price2 {
   margin-left: 300px;
   display: grid;
   margin-top: -20px;
   font-weight: bold;
 }
-section .menu_entrée .box_art-trois {
+
+section .box_art-trois {
   display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
+  background-color: #fff;
   grid-template-rows: 25px 20px;
   margin-top: 15px;
 }
-section .menu_entrée .box_art-trois .section_article-oeuf {
+
+section .box_art-trois .section_article-oeuf {
   margin-top: 10px;
   margin-left: 10px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: bold;
 }
-section .menu_entrée .box_art-trois .section_art-trois {
+
+section .box_art-trois .section_art-trois {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 17px;
 }
-section .menu_entrée .box_art-trois .section_art-trois .aside_price3 {
+
+section .box_art-trois .section_art-trois .aside_price3 {
   margin-left: 300px;
   display: grid;
   margin-top: -20px;
   font-weight: bold;
 }
-section .section_box__plat {
+
+.section_box__plat {
   margin-top: -235px;
   width: 100px;
   height: 30px;
@@ -197,7 +246,8 @@ section .section_box__plat {
   width: 43px;
   margin-left: 10px;
 }
-section .section_box__plat .plat {
+
+.section_box__plat .plat {
   margin-top: 10px;
 }
 
@@ -217,3 +267,4 @@ Footer {
   display: grid;
   grid-template-rows: auto;
 }
+/*# sourceMappingURL=cours_page-1.css.map */

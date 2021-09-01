@@ -43,7 +43,7 @@ width: 100%;
  border: 1px solid black;
 border-radius:20px;
 margin-right:10px;
-
+background-color: #fff;
 grid-template-rows: 25px 20px;
 
 }
@@ -114,7 +114,7 @@ section{border:1px solid black;
 background-color:#f2f2f2; 
 border-top-left-radius:30px;
 border-top-right-radius: 30px;
- margin-top: -20px; 
+ 
 .section_page{
    height: 150px;
    @include width-display;
@@ -175,8 +175,41 @@ margin-top:-240px;
 margin-left:10px;
 margin-right:10px;
 height:230px ;
+  
+  
 .box_art-un{
   @include box-article;
+  box-shadow:  3px 3px 10px #dedada;
+  cursor: pointer; 
+ grid-template-columns:250px 1fr 1fr;
+  }
+
+  .section__animation{ 
+  display:grid;
+    grid-area:2/4;
+    background-color:#99e2d0;
+  margin-left: 20px;
+   margin-top: -25px;
+   height:65px;
+
+   
+ border-bottom-right-radius: 20px;
+ border-top-right-radius:20px ;
+ width:60px;
+ 
+ .section__animation-rond{ width: 10px;
+  height: 10px;
+   border:1px solid black;
+   align-self: center;
+ }
+  }
+  
+  
+    
+    
+    
+    
+
 
 .section_article-h4{
   @include artilcle-h4;
@@ -184,6 +217,8 @@ height:230px ;
 }
 
 .section_art-asi{ @include aside_setion123;
+
+grid-area: 2/1;
  .aside_price{@include price123 
  }
 }
@@ -215,7 +250,7 @@ height:230px ;
  }
 .section_art-trois{
   @include aside_setion123; 
-  .aside_price3{@include price123  
+  .aside_price3{@include price123;  
 
   }
 
@@ -242,7 +277,7 @@ margin-left:10px;
 }
 
 
-}
+
 
 
 
