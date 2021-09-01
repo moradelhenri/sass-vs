@@ -59,6 +59,13 @@ grid-template-rows: 25px 20px;
   margin-top: 10px;
   margin-left:10px;
  font-size:17px ;
+
+}
+@mixin price123 {
+  margin-left:300px;
+display:grid;
+ margin-top: -20px; 
+ font-weight:bold;  
 }
 
 
@@ -164,9 +171,10 @@ margin-left:10px;
  
 border:1px solid black;
 @include width-display;
-margin-top:-385px;
+margin-top:-240px;
 margin-left:10px;
 margin-right:10px;
+height:230px ;
 .box_art-un{
   @include box-article;
 
@@ -176,9 +184,7 @@ margin-right:10px;
 }
 
 .section_art-asi{ @include aside_setion123;
- .aside_price{margin-left:150px;
-  font-weight:bold;
-
+ .aside_price{@include price123 
  }
 }
 
@@ -187,7 +193,7 @@ margin-right:10px;
 
 .box_art-deux{
  @include box-article;
- margin-top:-330px;
+ margin-top:15px ;
 
  .section_article-foi{
 @include artilcle-h4;
@@ -196,18 +202,45 @@ margin-right:10px;
 .section_art-deux{
   @include aside_setion123;
  
-.aside_price2{
-  margin-left:300px;
-display:grid;
- margin-top: -20px; 
- font-weight:bold; 
+.aside_price2{@include price123  
+  
 }
 }
+
+}
+.box_art-trois{ @include box-article;
+ margin-top:15px ;
+ .section_article-oeuf{
+  @include artilcle-h4;  
+ }
+.section_art-trois{
+  @include aside_setion123; 
+  .aside_price3{@include price123  
+
+  }
 
 }
 
 
 }
+
+
+}
+.section_box__plat{
+  margin-top:-235px;
+  width: 100px;
+  height:30px;  
+display: grid;
+border-bottom:4px solid $color-tertiaire;
+width:43px;
+margin-left:10px;
+.plat{
+  margin-top:10px;
+}
+
+
+}
+
 
 }
 
