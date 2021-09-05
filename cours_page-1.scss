@@ -38,34 +38,52 @@ width: 100%;
     font-weight:bold;
 }
 
-@mixin box-article{display: grid;
+@mixin box-article{
   height: 65px;
  border: 1px solid black;
 border-radius:20px;
 margin-right:10px;
+position: relative;
 background-color: #fff;
-grid-template-rows: 25px 20px;
 
+cursor: pointer;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+transition: padding-right 450ms ease-in-out;
+&:hover {
+  padding-right: 75px;
+  &:hover .section__animation {
+    opacity: 1;
+    transform: translate(-50px);
+  }
+  &:hover .fa-check-circle {
+    transform: rotate(360deg)
+  }
 }
-
+}
 @mixin artilcle-h4{
-  margin-top: 10px;
+  margin-top: -10px;
   margin-left: 10px;
  font-family:'Roboto';
  font-weight:bold;
   
 }
-@mixin aside_setion123{
-  margin-top: 10px;
+@mixin section__art{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
   margin-left:10px;
  font-size:17px ;
+margin-top: -15px;
 
 }
-@mixin price123 {
-  margin-left:300px;
-display:grid;
- margin-top: -20px; 
- font-weight:bold;  
+@mixin art-p {margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ 
+  
 }
 
 
@@ -120,9 +138,9 @@ border-top-right-radius: 30px;
    @include width-display;
    grid-template-rows:1fr 1fr;
    grid-template-columns:2fr 1fr; 
-.section__page_lap{margin-top:40px;
+.section__page_lap{ display:flex;margin-top:40px;
   font-family:'Shrikhand',cursif;
-font-stretch: 200%;
+
 }
 }
    .section_heart{
@@ -183,42 +201,31 @@ height:230px ;
   
 .box_art-un{
   @include box-article;
-  box-shadow:  3px 3px 10px #dedada;
-  cursor: pointer; 
- grid-template-columns:250px 1fr 1fr;
+ 
   }
 
   .section__animation{ 
-  display:grid;
-    grid-area:2/4;
-    background-color:#99e2d0;
-  margin-left: 20px;
-   margin-top: -25px;
-   height:65px;
-
-   
- border-bottom-right-radius: 20px;
- border-top-right-radius:20px ;
- width:60px;
- 
- .section__animation-rond{ width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  display: grid;
-   border:1px solid black;
-   margin-left: 20px;
-   align-self: center;
-  background-color: white;
-  span{ font-size:20px;
- 
-    align-self: center;
-    font-weight:900;
-    color:#99e2d0; 
-    font-family:"Roboto";
-    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99E2D0;
+    width: 50px;
+    height: 65px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    
+    right: -50px;
+    top: 0;
+    opacity: 0;
+    transition: transform 330ms ease-in-out
   }
- }
+  .section__animation .fa-check-circle {
+    color: #fff;
+    transition: transform 500ms ease-in-out;
   }
+ 
+ 
   
   
     
@@ -230,15 +237,24 @@ height:230px ;
 .section_article-h4{
   @include artilcle-h4;
 
+ 
+ 
 }
 
-.section_art-asi{ @include aside_setion123;
 
-grid-area: 2/1;
- .aside_price{@include price123 
- }
+.section__art{ @include section__art;
 }
+ .section__art p{@include art-p;
+ } 
+ .section__art span {
+  margin-right: 5px;
 
+
+
+
+
+
+}
 }
 
 
@@ -251,11 +267,12 @@ grid-area: 2/1;
  }
 
 .section_art-deux{
-  @include aside_setion123;
- 
-.aside_price2{@include price123  
-  
+  @include section__art;
 }
+ 
+.section__art p{@include art-p;
+  
+
 }
 
 }
@@ -265,10 +282,11 @@ grid-area: 2/1;
   @include artilcle-h4;  
  }
 .section_art-trois{
-  @include aside_setion123; 
-  .aside_price3{@include price123;  
+  @include section__art;
+}
+  .section__art p {@include art-p;  
 
-  }
+  
 
 }
 

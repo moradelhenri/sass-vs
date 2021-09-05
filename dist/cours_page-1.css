@@ -61,9 +61,9 @@ section .section_page {
   grid-template-columns: 2fr 1fr;
 }
 section .section_page .section__page_lap {
+  display: flex;
   margin-top: 40px;
   font-family: "Shrikhand", cursif;
-  font-stretch: 200%;
 }
 section .section_heart {
   width: 28px;
@@ -113,117 +113,157 @@ section .menu_entrée {
   height: 230px;
 }
 section .menu_entrée .box_art-un {
-  display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
+  position: relative;
   background-color: #fff;
-  grid-template-rows: 25px 20px;
-  box-shadow: 3px 3px 10px #dedada;
   cursor: pointer;
-  grid-template-columns: 250px 1fr 1fr;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+section .menu_entrée .box_art-un:hover {
+  padding-right: 75px;
+}
+section .menu_entrée .box_art-un:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_entrée .box_art-un:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 section .menu_entrée .section__animation {
-  display: grid;
-  grid-area: 2/4;
-  background-color: #99e2d0;
-  margin-left: 20px;
-  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
   height: 65px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 60px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
 }
-section .menu_entrée .section__animation .section__animation-rond {
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  display: grid;
-  border: 1px solid black;
-  margin-left: 20px;
-  align-self: center;
-  background-color: white;
-}
-section .menu_entrée .section__animation .section__animation-rond span {
-  font-size: 20px;
-  align-self: center;
-  font-weight: 900;
-  color: #99e2d0;
-  font-family: "Roboto";
-  margin-left: 5px;
+section .menu_entrée .section__animation .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
 }
 section .menu_entrée .section_article-h4 {
-  margin-top: 10px;
+  margin-top: -10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-weight: bold;
 }
-section .menu_entrée .section_art-asi {
-  margin-top: 10px;
+section .menu_entrée .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 10px;
   font-size: 17px;
-  grid-area: 2/1;
+  margin-top: -15px;
 }
-section .menu_entrée .section_art-asi .aside_price {
-  margin-left: 300px;
-  display: grid;
-  margin-top: -20px;
-  font-weight: bold;
+section .menu_entrée .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_entrée .section__art span {
+  margin-right: 5px;
 }
 section .box_art-deux {
-  display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
+  position: relative;
   background-color: #fff;
-  grid-template-rows: 25px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
   margin-top: 15px;
 }
+section .box_art-deux:hover {
+  padding-right: 75px;
+}
+section .box_art-deux:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .box_art-deux:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
 section .box_art-deux .section_article-foi {
-  margin-top: 10px;
+  margin-top: -10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-weight: bold;
 }
 section .box_art-deux .section_art-deux {
-  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 10px;
   font-size: 17px;
+  margin-top: -15px;
 }
-section .box_art-deux .section_art-deux .aside_price2 {
-  margin-left: 300px;
-  display: grid;
-  margin-top: -20px;
-  font-weight: bold;
+section .box_art-deux .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 section .box_art-trois {
-  display: grid;
   height: 65px;
   border: 1px solid black;
   border-radius: 20px;
   margin-right: 10px;
+  position: relative;
   background-color: #fff;
-  grid-template-rows: 25px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
   margin-top: 15px;
 }
+section .box_art-trois:hover {
+  padding-right: 75px;
+}
+section .box_art-trois:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .box_art-trois:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
 section .box_art-trois .section_article-oeuf {
-  margin-top: 10px;
+  margin-top: -10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-weight: bold;
 }
 section .box_art-trois .section_art-trois {
-  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 10px;
   font-size: 17px;
+  margin-top: -15px;
 }
-section .box_art-trois .section_art-trois .aside_price3 {
-  margin-left: 300px;
-  display: grid;
-  margin-top: -20px;
-  font-weight: bold;
+section .box_art-trois .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .section_box__plat {
