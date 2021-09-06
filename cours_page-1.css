@@ -124,7 +124,7 @@ section .section_box__ent .ent {
 section .menu_entrée {
   width: 100%;
   display: grid;
-  margin-top: -190px;
+  margin-top: -112px;
   height: 239px;
 }
 section .menu_entrée .box_art-un {
@@ -271,7 +271,7 @@ section .menu_entrée .box_art-trois .section__art span {
   padding-right: 15px;
 }
 section .section_box__plat {
-  margin-top: -150px;
+  margin-top: -75px;
   width: 100px;
   height: 30px;
   display: grid;
@@ -286,7 +286,7 @@ section .menu_plat {
   width: 100%;
   display: grid;
   height: 239px;
-  margin-top: -270px;
+  margin-top: -120px;
 }
 section .menu_plat .box_quatre {
   height: 68px;
@@ -430,6 +430,18 @@ section .menu_plat .box_six .section__art p {
 }
 section .menu_plat .box_six .section__art span {
   padding-right: 15px;
+}
+section .section_box__dessert {
+  width: 100px;
+  height: 30px;
+  display: grid;
+  border-bottom: 4px solid #99E2D0;
+  width: 43px;
+  margin-left: 20px;
+  margin-top: -60px;
+}
+section .section_box__dessert .dessert {
+  margin-top: 5px;
 }
 
 nav {

@@ -220,7 +220,7 @@ border-top-right-radius: 30px;
 .menu_entrée{
 
 @include width-display;
-margin-top:-190px;
+margin-top:-112px;
 
 height:239px ;
  
@@ -287,7 +287,7 @@ height:239px ;
 }
 
 .section_box__plat{
-margin-top: -150px;
+margin-top: -75px;
  @include green-line;
 .plat{
 margin-top: 5px ;
@@ -298,7 +298,7 @@ margin-top: 5px ;
 .menu_plat{
   @include width-display;
   height:239px;
-margin-top:-270px;
+margin-top:-120px;
 
  
 .box_quatre{
@@ -357,10 +357,15 @@ margin-top:-270px;
 
 }
 
+.section_box__dessert{
+  @include green-line;
+ margin-top:- 60px;
+  .dessert{
+    margin-top: 5px ; 
+  }
 
 
-
- 
+}
 
 
 
