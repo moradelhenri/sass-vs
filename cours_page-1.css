@@ -53,32 +53,49 @@ section {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+section .section__animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 68px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+section .section__animation .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
 section .section_page {
   height: 150px;
-  width: 100%;
-  display: grid;
+  margin-top: 15px;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
+  width: 100%;
+  display: grid;
 }
 section .section_page .section__page_lap {
   display: flex;
-  margin-top: 40px;
+  margin-top: 20px;
   font-family: "Shrikhand", cursif;
+  width: 300px;
+  margin-left: 20px;
+  font-size: 26px;
 }
 section .section_heart {
   width: 28px;
   height: 30px;
   grid-area: 1/2;
-  margin-top: 35px;
-  margin-left: 26px;
-}
-section .heart {
-  width: 28px;
-  height: auto;
+  margin-top: 15px;
 }
 section .fa-heart {
   margin-top: 10px;
-  margin-left: 35px;
   font-size: 23px;
 }
 section .fa-heart .fa-heart::before {
@@ -98,27 +115,26 @@ section .section_box__ent {
   display: grid;
   border-bottom: 4px solid #99E2D0;
   width: 43px;
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 section .section_box__ent .ent {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 section .menu_entrée {
-  border: 1px solid black;
   width: 100%;
   display: grid;
-  margin-top: -240px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 230px;
+  margin-top: -190px;
+  height: 239px;
 }
 section .menu_entrée .box_art-un {
-  height: 65px;
-  border: 1px solid black;
-  border-radius: 20px;
+  height: 68px;
+  border-radius: 15px;
   margin-right: 10px;
+  margin-left: 10px;
   position: relative;
   background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -135,32 +151,13 @@ section .menu_entrée .box_art-un:hover:hover .section__animation {
 section .menu_entrée .box_art-un:hover:hover .fa-check-circle {
   transform: rotate(360deg);
 }
-section .menu_entrée .section__animation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 65px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  right: -50px;
-  top: 0;
-  opacity: 0;
-  transition: transform 330ms ease-in-out;
-}
-section .menu_entrée .section__animation .fa-check-circle {
-  color: #fff;
-  transition: transform 500ms ease-in-out;
-}
-section .menu_entrée .section_article-h4 {
+section .menu_entrée .box_art-un .section_article-h4 {
   margin-top: -10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-weight: bold;
 }
-section .menu_entrée .section__art {
+section .menu_entrée .box_art-un .section__art {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -168,22 +165,23 @@ section .menu_entrée .section__art {
   font-size: 17px;
   margin-top: -15px;
 }
-section .menu_entrée .section__art p {
+section .menu_entrée .box_art-un .section__art p {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-section .menu_entrée .section__art span {
-  margin-right: 5px;
+section .menu_entrée .box_art-un .section__art span {
+  padding-right: 15px;
 }
-section .box_art-deux {
-  height: 65px;
-  border: 1px solid black;
-  border-radius: 20px;
+section .menu_entrée .box_art-deux {
+  height: 68px;
+  border-radius: 15px;
   margin-right: 10px;
+  margin-left: 10px;
   position: relative;
   background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -191,23 +189,23 @@ section .box_art-deux {
   transition: padding-right 450ms ease-in-out;
   margin-top: 15px;
 }
-section .box_art-deux:hover {
+section .menu_entrée .box_art-deux:hover {
   padding-right: 75px;
 }
-section .box_art-deux:hover:hover .section__animation {
+section .menu_entrée .box_art-deux:hover:hover .section__animation {
   opacity: 1;
   transform: translate(-50px);
 }
-section .box_art-deux:hover:hover .fa-check-circle {
+section .menu_entrée .box_art-deux:hover:hover .fa-check-circle {
   transform: rotate(360deg);
 }
-section .box_art-deux .section_article-foi {
+section .menu_entrée .box_art-deux .section_article-foi {
   margin-top: -10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-weight: bold;
 }
-section .box_art-deux .section_art-deux {
+section .menu_entrée .box_art-deux .section__art {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -215,19 +213,23 @@ section .box_art-deux .section_art-deux {
   font-size: 17px;
   margin-top: -15px;
 }
-section .box_art-deux .section__art p {
+section .menu_entrée .box_art-deux .section__art p {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-section .box_art-trois {
-  height: 65px;
-  border: 1px solid black;
-  border-radius: 20px;
+section .menu_entrée .box_art-deux .section__art span {
+  padding-right: 15px;
+}
+section .menu_entrée .box_art-trois {
+  height: 68px;
+  border-radius: 15px;
   margin-right: 10px;
+  margin-left: 10px;
   position: relative;
   background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -235,23 +237,23 @@ section .box_art-trois {
   transition: padding-right 450ms ease-in-out;
   margin-top: 15px;
 }
-section .box_art-trois:hover {
+section .menu_entrée .box_art-trois:hover {
   padding-right: 75px;
 }
-section .box_art-trois:hover:hover .section__animation {
+section .menu_entrée .box_art-trois:hover:hover .section__animation {
   opacity: 1;
   transform: translate(-50px);
 }
-section .box_art-trois:hover:hover .fa-check-circle {
+section .menu_entrée .box_art-trois:hover:hover .fa-check-circle {
   transform: rotate(360deg);
 }
-section .box_art-trois .section_article-oeuf {
+section .menu_entrée .box_art-trois .section_article-oeuf {
   margin-top: -10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-weight: bold;
 }
-section .box_art-trois .section_art-trois {
+section .menu_entrée .box_art-trois .section__art {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -259,24 +261,175 @@ section .box_art-trois .section_art-trois {
   font-size: 17px;
   margin-top: -15px;
 }
-section .box_art-trois .section__art p {
+section .menu_entrée .box_art-trois .section__art p {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-.section_box__plat {
-  margin-top: -235px;
+section .menu_entrée .box_art-trois .section__art span {
+  padding-right: 15px;
+}
+section .section_box__plat {
+  margin-top: -150px;
   width: 100px;
   height: 30px;
   display: grid;
   border-bottom: 4px solid #99E2D0;
   width: 43px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
-.section_box__plat .plat {
+section .section_box__plat .plat {
+  margin-top: 5px;
+}
+section .menu_plat {
+  width: 100%;
+  display: grid;
+  height: 239px;
+  margin-top: -270px;
+}
+section .menu_plat .box_quatre {
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+section .menu_plat .box_quatre:hover {
+  padding-right: 75px;
+}
+section .menu_plat .box_quatre:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_plat .box_quatre:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+section .menu_plat .box_quatre .section_article-h4 {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+section .menu_plat .box_quatre .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: -15px;
+}
+section .menu_plat .box_quatre .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_plat .box_quatre .section__art span {
+  padding-right: 15px;
+}
+section .menu_plat .box_cinq {
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
   margin-top: 10px;
+}
+section .menu_plat .box_cinq:hover {
+  padding-right: 75px;
+}
+section .menu_plat .box_cinq:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_plat .box_cinq:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+section .menu_plat .box_cinq .section_article-h4 {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+section .menu_plat .box_cinq .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: -15px;
+}
+section .menu_plat .box_cinq .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_plat .box_cinq .section__art span {
+  padding-right: 15px;
+}
+section .menu_plat .box_six {
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+  margin-top: 10px;
+}
+section .menu_plat .box_six:hover {
+  padding-right: 75px;
+}
+section .menu_plat .box_six:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_plat .box_six:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+section .menu_plat .box_six .section_article-h4 {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+section .menu_plat .box_six .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: -15px;
+}
+section .menu_plat .box_six .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_plat .box_six .section__art span {
+  padding-right: 15px;
 }
 
 nav {
