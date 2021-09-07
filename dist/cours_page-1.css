@@ -637,7 +637,7 @@ nav .box_btn:hover {
 footer {
   grid-area: footer;
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-color: #322f2f;
 }
 footer .footer_box-logo {
@@ -654,7 +654,7 @@ footer .footer_box-logo .footer_logo {
 }
 footer .footer_list {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 30px 30px 30px 30px;
   margin-left: 10px;
 }
 footer .footer_list-un, footer .footer_list-deux {
@@ -673,7 +673,7 @@ footer .footer_box-list {
   margin-top: -5px;
 }
 footer .footer_box-list-deux {
-  margin-top: -16px;
+  margin-top: -30px;
 }
 footer .footer_list-trois, footer .footer_contact {
   color: white;

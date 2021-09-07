@@ -23,7 +23,7 @@ footer{
   
    .footer_list{display:grid;
    
-   grid-template-rows:repeat(4, 1fr);
+   grid-template-rows:30px 30px 30px 30px;
   margin-left:10px; 
    }
   .footer_list-un,.footer_list-deux{ 
