@@ -124,7 +124,7 @@ section .section_box__ent .ent {
 section .menu_entrée {
   width: 100%;
   display: grid;
-  margin-top: -112px;
+  margin-top: -20px;
   height: 239px;
 }
 section .menu_entrée .box_art-un {
@@ -271,7 +271,7 @@ section .menu_entrée .box_art-trois .section__art span {
   padding-right: 15px;
 }
 section .section_box__plat {
-  margin-top: -75px;
+  margin-top: 30px;
   width: 100px;
   height: 30px;
   display: grid;
@@ -283,10 +283,10 @@ section .section_box__plat .plat {
   margin-top: 5px;
 }
 section .menu_plat {
+  margin-top: 10px;
   width: 100%;
   display: grid;
   height: 239px;
-  margin-top: -120px;
 }
 section .menu_plat .box_quatre {
   height: 68px;
@@ -438,18 +438,191 @@ section .section_box__dessert {
   border-bottom: 4px solid #99E2D0;
   width: 43px;
   margin-left: 20px;
-  margin-top: -60px;
+  margin-top: 30px;
 }
 section .section_box__dessert .dessert {
   margin-top: 5px;
 }
+section .menu_dessert {
+  width: 100%;
+  display: grid;
+  height: 239px;
+  border: 1px solid black;
+  margin-top: 15px;
+}
+section .menu_dessert .box_sept {
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+section .menu_dessert .box_sept:hover {
+  padding-right: 75px;
+}
+section .menu_dessert .box_sept:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_dessert .box_sept:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+section .menu_dessert .box_sept .section_article-h4 {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+section .menu_dessert .box_sept .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: -15px;
+}
+section .menu_dessert .box_sept .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_dessert .box_sept .section__art span {
+  padding-right: 15px;
+}
+section .menu_dessert .box_huit {
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+  margin-top: 10px;
+}
+section .menu_dessert .box_huit:hover {
+  padding-right: 75px;
+}
+section .menu_dessert .box_huit:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_dessert .box_huit:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+section .menu_dessert .box_huit .section_article-h4 {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+section .menu_dessert .box_huit .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: -15px;
+}
+section .menu_dessert .box_huit .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_dessert .box_huit .section__art span {
+  padding-right: 15px;
+}
+section .menu_dessert .box_neuf {
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+  margin-top: 10px;
+}
+section .menu_dessert .box_neuf:hover {
+  padding-right: 75px;
+}
+section .menu_dessert .box_neuf:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+section .menu_dessert .box_neuf:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+section .menu_dessert .box_neuf .section_article-h4 {
+  margin-top: -10px;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+section .menu_dessert .box_neuf .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: -15px;
+}
+section .menu_dessert .box_neuf .section__art p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .menu_dessert .box_neuf .section__art span {
+  padding-right: 15px;
+}
 
 nav {
   border: 1px solid black;
-  background-color: red;
   grid-area: nav;
   width: 100%;
   display: grid;
+  border-radius: 30px;
+  display: flex;
+}
+nav .box_btn {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  margin-top: 10px;
+  box-shadow: 0 5px 5px -3px #333;
+  width: 235px;
+  margin-left: 17%;
+  height: 49px;
+  cursor: pointer;
+}
+
+.box_btn-btn {
+  align-self: center;
+  margin-left: 10%;
+  display: inline;
+  color: white;
+  font-weight: 600;
+}
+
+.box_btn:hover {
+  transform: scale(1.015);
+  transition-duration: 4s;
 }
 
 Footer {
