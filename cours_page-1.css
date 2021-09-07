@@ -4,6 +4,12 @@ body {
   margin: 0;
   height: 100vh;
   width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
 }
 
 .wapper {
@@ -20,27 +26,29 @@ header {
   background-color: #FEFEFE;
   width: 100%;
   display: grid;
-  margin-top: 0.3rem;
-  grid-template-rows: 60px 250px;
+  grid-template-rows: 80px 300px;
+  height: 400px;
 }
-header .header-box {
+header .header__box {
   background-color: #FEFEFE;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   display: grid;
-  margin-top: -8px;
+  height: 50px;
 }
-header .header-box .acueil {
-  align-self: center;
+header .header__box .acueil {
   margin-left: 20px;
+  margin-top: 30px;
 }
-header .header-box .header-logo {
-  font-size: 30px;
-  grid-area: 1/2;
-  margin-left: -30px;
+header .header__box .logo {
+  align-self: center;
+  justify-self: center;
   font-family: "Shrikhand", cursif;
+  margin-top: -10px;
 }
-
-.header_img-pal {
-  height: 250px;
+header .header_img-pal {
+  height: 300px;
+  margin-top: -20px;
   width: 100%;
 }
 
@@ -52,6 +60,7 @@ section {
   background-color: #f2f2f2;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  margin-top: 40px;
 }
 section .section__animation {
   display: flex;
@@ -596,40 +605,87 @@ section .menu_dessert .box_neuf .section__art span {
 
 nav {
   border: 1px solid black;
-  grid-area: nav;
   width: 100%;
+  grid-area: nav;
+  height: 150px;
   display: grid;
-  border-radius: 30px;
-  display: flex;
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-items: center;
 }
 nav .box_btn {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
-  margin-top: 10px;
+  border-radius: 30px;
+  align-items: center;
+  justify-items: center;
   box-shadow: 0 5px 5px -3px #333;
-  width: 235px;
-  margin-left: 17%;
+  width: 200px;
+  display: grid;
   height: 49px;
   cursor: pointer;
 }
-
-.box_btn-btn {
-  align-self: center;
-  margin-left: 10%;
+nav .box_btn-btn {
   display: inline;
   color: white;
   font-weight: 600;
 }
-
-.box_btn:hover {
-  transform: scale(1.015);
-  transition-duration: 4s;
+nav .box_btn:hover {
+  transform: scale(1.2);
+  transition-duration: 3s;
 }
 
-Footer {
-  border: 1px solid black;
-  background-color: black;
+footer {
   grid-area: footer;
   width: 100%;
+  height: 100px;
+  background-color: #322f2f;
+}
+footer .footer_box-logo {
+  width: 150px;
+  height: 30px;
+  margin-top: 20px;
   display: grid;
-  grid-template-rows: auto;
+  margin-left: 10px;
+}
+footer .footer_box-logo .footer_logo {
+  color: white;
+  font-size: 17px;
+  font-family: "Shrikhand", cursif;
+}
+footer .footer_list {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  margin-left: 10px;
+}
+footer .footer_list-un, footer .footer_list-deux {
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 30px;
+  color: white;
+  margin-top: -15px;
+}
+footer .fa-hands-helping, footer .fa-utensils {
+  color: white;
+  margin-top: 20px;
+  display: grid;
+}
+footer .footer_box-list {
+  margin-top: -5px;
+}
+footer .footer_box-list-deux {
+  margin-top: -16px;
+}
+footer .footer_list-trois, footer .footer_contact {
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+footer .footer_list-trois {
+  width: 150px;
+  margin-top: -8px;
+}
+footer .footer_contact {
+  display: grid;
+  width: 150px;
+  margin-top: -16px;
 }

@@ -72,12 +72,13 @@
   
    .box_btn{
     background:linear-gradient(180deg, $color-primary,$color-secondaire);
-  cursor:pointer;
+
   margin-top:10px;
   box-shadow: 0 5px 5px -3px #333;
   width: 235px;
   margin-left: 17%;
   height:49px;
+  cursor:pointer;
   @media (min-width: 480px){
     margin-left:25%; 
    }     
@@ -98,7 +99,7 @@
    }
   }
   
-   .box_btn:hover{ transform: scale(1.015);
+   .box_btn:hover{ transform: scale(1.2);
     transition-duration: 4s;
   
    }
