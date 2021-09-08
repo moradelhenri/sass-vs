@@ -17,7 +17,7 @@ a:link {
   display: grid;
   height: 1641px;
   grid-template-rows: 80px 1fr 4fr 1fr 1fr;
-  border: 1px solid black;
+  background-color: #f2f2f2;
   grid-template-areas: "header" "header" "section" "nav" "footer";
 }
 
@@ -50,10 +50,10 @@ header .header_img-pal {
   height: 300px;
   margin-top: -20px;
   width: 100%;
+  object-fit: cover;
 }
 
 section {
-  border: 1px solid black;
   grid-area: section;
   width: 100%;
   display: grid;
@@ -85,17 +85,18 @@ section .section_page {
   height: 150px;
   margin-top: 15px;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 300px 50px 50px;
   width: 100%;
   display: grid;
 }
 section .section_page .section__page_lap {
-  display: flex;
+  display: grid;
   margin-top: 20px;
   font-family: "Shrikhand", cursif;
   width: 300px;
   margin-left: 20px;
   font-size: 26px;
+  grid-area: 1/1;
 }
 section .section_heart {
   width: 28px;
@@ -126,6 +127,7 @@ section .section_box__ent {
   width: 43px;
   margin-left: 20px;
   margin-top: 5px;
+  grid-area: 2/1;
 }
 section .section_box__ent .ent {
   margin-top: 5px;
@@ -456,7 +458,6 @@ section .menu_dessert {
   width: 100%;
   display: grid;
   height: 239px;
-  border: 1px solid black;
   margin-top: 15px;
 }
 section .menu_dessert .box_sept {
@@ -604,7 +605,6 @@ section .menu_dessert .box_neuf .section__art span {
 }
 
 nav {
-  border: 1px solid black;
   width: 100%;
   grid-area: nav;
   height: 150px;
@@ -639,6 +639,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #322f2f;
+  margin: top -10px;
 }
 footer .footer_box-logo {
   width: 150px;
@@ -660,8 +661,8 @@ footer .footer_list {
 footer .footer_list-un, footer .footer_list-deux {
   font-weight: 600;
   font-size: 15px;
-  margin-left: 30px;
   color: white;
+  margin-left: 30px;
   margin-top: -15px;
 }
 footer .fa-hands-helping, footer .fa-utensils {
@@ -676,9 +677,9 @@ footer .footer_box-list-deux {
   margin-top: -30px;
 }
 footer .footer_list-trois, footer .footer_contact {
-  color: white;
   font-weight: 600;
   font-size: 15px;
+  color: white;
 }
 footer .footer_list-trois {
   width: 150px;

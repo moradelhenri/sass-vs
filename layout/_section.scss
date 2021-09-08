@@ -4,6 +4,7 @@
 
 .section_box-img{  
   @include section_img;
+ 
   @media (min-width: 1024px){
   @include  section_img_destop;  
  }

@@ -3,7 +3,7 @@
  $color-secondaire:#9356DC;
 $color-tertiaire:#99E2D0;
 
-
+@import "./utils/mixins";
 
 
   
@@ -117,7 +117,7 @@ margin-top: -15px;
     .wapper{@include width-display;
     height: 1641px;
     grid-template-rows:80px 1fr 4fr 1fr 1fr;
-    border:1px solid black;
+    background-color:#f2f2f2; 
  grid-template-areas: "header""header""section"
  "nav" "footer";
 
@@ -151,11 +151,11 @@ margin-top :-10px;
    .header_img-pal{ height:300px;
     margin-top:-20px ;
     width: 100%;
-  
+   object-fit: cover;
    }
    }
 
-section{border:1px solid black;
+section{
    grid-area:section;
  @include width-display;
 background-color:#f2f2f2; 
@@ -176,14 +176,14 @@ margin-top :40px;
    height: 150px;
  margin-top: 15px;
    grid-template-rows:1fr 1fr;
-   grid-template-columns:2fr 1fr; 
+   grid-template-columns:300px 50px 50px; 
  @include width-display;
-.section__page_lap{ display:flex;margin-top:20px;
+.section__page_lap{ display:grid;margin-top:20px;
   font-family : 'Shrikhand', cursif ;
   width: 300px;
  margin-left: 20px;
  font-size: 26px;
-
+ grid-area: 1/1;
 
 }
 }
@@ -192,6 +192,7 @@ margin-top :40px;
     width: 28px;
     height: 30px;
   grid-area: 1/2;
+
  margin-top: 15px;
 
    }
@@ -210,7 +211,7 @@ margin-top :40px;
 .section_box__ent{
  @include green-line;
  margin-top: 5px;
-
+grid-area:2/ 1;
 .ent{
 
  margin-top:5px;
@@ -374,7 +375,7 @@ margin-top: 5px ;
 .menu_dessert{ 
   @include width-display;
   height:239px;
-  border: 1px solid black;
+
   margin-top: 15px;
   .box_sept{ @include box-article; 
   .section_article-h4{
@@ -427,25 +428,33 @@ margin-top: 5px ;
 
 
 }
+
+@mixin navbtn_1234{
+  width:100% ;
+     grid-area: nav;
+    height:150px ;
+    display:grid;
+    background-color:#f2f2f2; 
+  align-items:center ;
+  justify-items: center;
+
+}
+@mixin nav_btn-page1234{background:linear-gradient(180deg, $color-primary,$color-secondaire);
+  border-radius:30px;
+  align-items:center ;
+ justify-items: center;
+   box-shadow: 0 5px 5px -3px #333;
+   width: 200px;
+  display:grid ;
+   height:49px;
+   cursor:pointer;
+  
+}
  
-  nav{border:1px solid black;
-width:100% ;
-   grid-area: nav;
-  height:150px ;
-  display:grid;
-  background-color:#f2f2f2; 
-align-items:center ;
-justify-items: center;
+  nav{@include navbtn_1234;
+
   .box_btn{
-    background:linear-gradient(180deg, $color-primary,$color-secondaire);
- border-radius:30px;
- align-items:center ;
-justify-items: center;
-  box-shadow: 0 5px 5px -3px #333;
-  width: 200px;
- display:grid ;
-  height:49px;
-  cursor:pointer;
+ @include nav_btn-page1234;
 
    }     
  
@@ -476,7 +485,7 @@ justify-items: center;
   width:100%;
   height:100%;
   background-color:#322f2f;  
-
+margin: top -10px;
 
    
 .footer_box-logo{width:150px;
@@ -500,10 +509,9 @@ justify-items: center;
   margin-left:10px; 
    }
   .footer_list-un,.footer_list-deux{ 
-   font-weight:600;
-   font-size:15px ;
+    @include footer_color-font;  
    margin-left:30px;
-   color:white;
+  
    margin-top:-15px;
   }
   .fa-hands-helping,.fa-utensils{color:white;
@@ -519,10 +527,8 @@ justify-items: center;
     margin-top:-30px;
   }
   
-  .footer_list-trois,.footer_contact{color:white;
-    font-weight:600; 
-     font-size:15px ;
-   
+  .footer_list-trois,.footer_contact{
+   @include footer_color-font;  
    }
    .footer_list-trois{
   

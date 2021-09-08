@@ -95,7 +95,7 @@
    border-top-left-radius:20px;
    width:100% ;
    height: 180px;  
-  object-fit:cover;
+   object-fit: cover;
   }
 
   @mixin heart{border-radius:50px;   
@@ -123,14 +123,11 @@
  display: grid;
    margin-left:7%;
    border-radius:20px;
-  
-   
+    
    
  }
- @mixin section_img {
-   display: flex;
-  border-top-right-radius:20px;
-  border-top-left-radius:20px;
-  width:100% ;
-  height: 180px;
- }
+    
+ @mixin footer_color-font{ font-weight:600;
+  font-size:15px ;
+  color:white;
+}

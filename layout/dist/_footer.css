@@ -24,12 +24,12 @@ footer {
   margin-left: 10px;
 }
 
-.footer_list-un, .footer_list-deux {
+.footer_list-un {
   font-weight: 600;
   font-size: 15px;
-  margin-left: 30px;
   color: white;
-  margin-top: -15px;
+  margin-left: 30px;
+  margin-top: -20px;
 }
 
 .fa-hands-helping, .fa-utensils {
@@ -43,22 +43,26 @@ footer {
 }
 
 .footer_box-list-deux {
-  margin-top: -16px;
+  margin-top: -10px;
 }
 
-.footer_list-trois, .footer_contact {
-  color: white;
+.footer_list-deux {
+  margin-left: 30px;
   font-weight: 600;
   font-size: 15px;
+  color: white;
+  margin-top: -15px;
 }
-
-.footer_list-trois {
+.footer_list-deux .footer_list-trois, .footer_list-deux .footer_contact {
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  margin-top: 5px;
+}
+.footer_list-deux .footer_list-trois {
   width: 150px;
-  margin-top: -8px;
 }
-
-.footer_contact {
+.footer_list-deux .footer_contact {
   display: grid;
   width: 150px;
-  margin-top: -16px;
 }
