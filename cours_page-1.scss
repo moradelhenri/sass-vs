@@ -17,7 +17,7 @@ padding:0 ;
 margin: 0;
 height: 100vh;
 width: 100%;
-font-family:"Roboto",sans-serif;
+font-family:'Roboto',sans-serif;
 
 }
  
@@ -50,7 +50,9 @@ margin-left:20px;
 
 @mixin box-article{
   height: 68px;
-
+  animation-duration: 3s;
+  animation-name:glissement;
+ 
 border-radius:15px;
 margin-right:10px;
 margin-left: 10px;
@@ -106,11 +108,10 @@ margin-top: -15px;
 
 }
 @mixin art-p {margin: 0;
-  white-space: nowrap;
+ 
   text-overflow: ellipsis;
   overflow: hidden;
- 
-  
+ font-size:smaller;
 }
 
 
@@ -176,13 +177,13 @@ margin-top :40px;
    height: 150px;
  margin-top: 15px;
    grid-template-rows:1fr 1fr;
-   grid-template-columns:300px 50px 50px; 
+   grid-template-columns:280px 0.5fr 1fr ;
  @include width-display;
 .section__page_lap{ display:grid;margin-top:20px;
   font-family : 'Shrikhand', cursif ;
-  width: 300px;
+
  margin-left: 20px;
- font-size: 26px;
+ font-size: 25px;
  grid-area: 1/1;
 
 }
@@ -192,7 +193,7 @@ margin-top :40px;
     width: 28px;
     height: 30px;
   grid-area: 1/2;
-
+ margin-left:10px ;
  margin-top: 15px;
 
    }
@@ -219,7 +220,17 @@ grid-area:2/ 1;
 
 }
 
+@keyframes glissement {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  }
 
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
 
 
@@ -480,13 +491,13 @@ margin-top: 5px ;
 
 
 
-   footer{
+  footer{
     grid-area:footer;
   width:100%;
   height:100%;
   background-color:#322f2f;  
-margin: top -10px;
-
+  margin-top:-20px ;
+  
    
 .footer_box-logo{width:150px;
     height:30px;
@@ -504,52 +515,65 @@ margin: top -10px;
   
   
    .footer_list{display:grid;
-   
+
    grid-template-rows:30px 30px 30px 30px;
   margin-left:10px; 
-   }
-  .footer_list-un,.footer_list-deux{ 
-    @include footer_color-font;  
-   margin-left:30px;
-  
-   margin-top:-15px;
-  }
-  .fa-hands-helping,.fa-utensils{color:white;
-    margin-top:20px;
-    display:grid;
-  
-  
-  }
+
+
   .footer_box-list{
-    margin-top:-5px;
+    margin-top:5px;
+
+ .fa-utensils{color:white;
+  margin-top:10px;
+   
+ }
+  .footer_list-un{ 
+  @include footer_color-font;  
+   margin-left:30px;
+  grid-area:1/1 ;
+  display:grid;
+  margin-top:-20px;
   }
-  .footer_box-list-deux{
-    margin-top:-30px;
+ 
+}
+.footer_box-list-deux{
+  margin-top:10px;
+
+  .fa-hands-helping{
+    color:white;
   }
-  
+ 
+  .footer_list-deux{ 
+    margin-left: 30px;
+   @include footer_color-font;
+    margin-top: -20px;
+
+
+}
+  }
   .footer_list-trois,.footer_contact{
-   @include footer_color-font;  
-   }
+    @include footer_color-font;
+     margin-top: 5px;
+ 
    .footer_list-trois{
   
   width:150px;
-  margin-top:-8px;
   
    }
+  }
    .footer_contact{
-   display:grid;
-  
+ 
   width:150px;
-  margin-top:-16px;
-   }
+
+  
   
    
-   }
+  }
   
+}
 
-
-
-
+}
+ 
 
 
 
