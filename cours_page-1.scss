@@ -12,7 +12,7 @@ $color-tertiaire:#99E2D0;
 
 
 body{
-
+background-color:yellow ;
 padding:0 ;
 margin: 0;
 height: 100vh;
@@ -50,12 +50,12 @@ margin-left:20px;
 
 @mixin box-article{
   height: 68px;
-  animation-duration: 3s;
-  animation-name:glissement;
- 
+  -webkit-animation-duration: 3s;
+ -webkit-animation-name:glissement;
+ margin-left:10px;
+ margin-right:10px; 
 border-radius:15px;
-margin-right:10px;
-margin-left: 10px;
+
 position: relative;
 background-color: #fff;
 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -97,6 +97,11 @@ transition: padding-right 450ms ease-in-out;
  font-family:'Roboto';
  font-weight:bold;
   
+
+
+
+
+
 }
 @mixin section__art{
   display: flex;
@@ -108,7 +113,7 @@ margin-top: -15px;
 
 }
 @mixin art-p {margin: 0;
- 
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
  font-size:smaller;
@@ -116,9 +121,12 @@ margin-top: -15px;
 
 
     .wapper{@include width-display;
-    height: 1641px;
+  border :1px solid black;
+ height:100vh;
+ background-color: red;
     grid-template-rows:80px 1fr 4fr 1fr 1fr;
-    background-color:#f2f2f2; 
+  width:100%;
+
  grid-template-areas: "header""header""section"
  "nav" "footer";
 
@@ -128,16 +136,16 @@ header{
     grid-area:header;
     background-color:#FEFEFE;
     @include width-display;   
-   grid-template-rows:80px 300px;
- 
+   grid-template-rows:100px 300px;
+  
    height: 400px;
    
   .header__box{background-color:#FEFEFE;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:repeat(2, 1fr);
 display:grid ;
- 
-    height: 50px;
+
+    height: 80px;
   .acueil{
      margin-left: 20px;
      margin-top :30px;
@@ -147,10 +155,14 @@ justify-self: center;
 font-family: 'Shrikhand', cursif ;
 margin-top :-10px;
 
+
+
+
+font-weight: lighter;
   }
    }
-   .header_img-pal{ height:300px;
-    margin-top:-20px ;
+   .header_img-pal{ height:250px;
+    margin-top :-40px;
     width: 100%;
    object-fit: cover;
    }
@@ -159,10 +171,10 @@ margin-top :-10px;
 section{
    grid-area:section;
  @include width-display;
-background-color:#f2f2f2; 
+ margin-top:-120px ;
 border-top-left-radius:30px;
-border-top-right-radius: 30px;
-margin-top :40px;
+border-top-right-radius:30px;
+background-color: #f2f2f2;
 .section__animation{ 
   @include anim;
  }
@@ -219,8 +231,7 @@ grid-area:2/ 1;
 }
 
 }
-
-@keyframes glissement {
+ @keyframes glissement {
   from {
     margin-top: 100%;
     width: 300%;
@@ -234,14 +245,14 @@ grid-area:2/ 1;
 
 
 
+
 .menu_entrée{
 
 @include width-display;
 margin-top:-20px ;
 
 height:239px ;
- 
-  
+
 .box_art-un{
   @include box-article;   
 
@@ -308,6 +319,7 @@ margin-top:30px;
  @include green-line;
 .plat{
 margin-top: 5px ;
+
 }
 
 
@@ -494,7 +506,7 @@ margin-top: 5px ;
   footer{
     grid-area:footer;
   width:100%;
-  height:100%;
+  height:170px; 
   background-color:#322f2f;  
   margin-top:-20px ;
   
