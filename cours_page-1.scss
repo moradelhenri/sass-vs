@@ -12,11 +12,10 @@ $color-tertiaire:#99E2D0;
 
 
 body{
-background-color:yellow ;
-padding:0 ;
-margin: 0;
-height: 100vh;
-width: 100%;
+  margin: 0px;
+  padding:  0px;
+width:100% ;
+  height:100vh;
 font-family:'Roboto',sans-serif;
 
 }
@@ -121,24 +120,23 @@ margin-top: -15px;
 
 
     .wapper{@include width-display;
-  border :1px solid black;
- height:100vh;
- background-color: red;
-    grid-template-rows:80px 1fr 4fr 1fr 1fr;
-  width:100%;
+
+ height:1641px;
+ width: 100%;
+
+grid-template-rows:80px 1fr 4fr 1fr 1fr;
 
  grid-template-areas: "header""header""section"
  "nav" "footer";
 
 
-}
 header{ 
     grid-area:header;
     background-color:#FEFEFE;
     @include width-display;   
-   grid-template-rows:100px 300px;
-  
-   height: 400px;
+   grid-template-rows:80px 300px;
+ 
+   height: 380px;
    
   .header__box{background-color:#FEFEFE;
     grid-template-columns: repeat(3, 1fr);
@@ -153,7 +151,7 @@ display:grid ;
   .logo{align-self: center;
 justify-self: center;
 font-family: 'Shrikhand', cursif ;
-margin-top :-10px;
+margin-top:-10px ;
 
 
 
@@ -161,19 +159,21 @@ margin-top :-10px;
 font-weight: lighter;
   }
    }
-   .header_img-pal{ height:250px;
-    margin-top :-40px;
-    width: 100%;
-   object-fit: cover;
+   .header_img-pal{
+    margin-top:-20px;
+  object-fit:cover ;
+ width:100%;
+ height:300px ;
    }
    }
 
 section{
    grid-area:section;
  @include width-display;
- margin-top:-120px ;
-border-top-left-radius:30px;
-border-top-right-radius:30px;
+ height: 1010px;
+ margin-top :-20px;
+border-top-left-radius:25px;
+border-top-right-radius:25px;
 background-color: #f2f2f2;
 .section__animation{ 
   @include anim;
@@ -455,7 +455,7 @@ margin-top: 5px ;
 @mixin navbtn_1234{
   width:100% ;
      grid-area: nav;
-    height:150px ;
+    height:200px ;
     display:grid;
     background-color:#f2f2f2; 
   align-items:center ;
@@ -476,9 +476,10 @@ margin-top: 5px ;
  
   nav{@include navbtn_1234;
 
+
   .box_btn{
  @include nav_btn-page1234;
-
+ margin-top:-20px ;
    }     
  
  
@@ -506,9 +507,9 @@ margin-top: 5px ;
   footer{
     grid-area:footer;
   width:100%;
-  height:170px; 
+  height:210px; 
   background-color:#322f2f;  
-  margin-top:-20px ;
+  margin-top:-30px ;
   
    
 .footer_box-logo{width:150px;
@@ -588,6 +589,6 @@ margin-top: 5px ;
  
 
 
-
+    }
 
 
