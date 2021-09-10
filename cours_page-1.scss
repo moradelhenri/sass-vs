@@ -1,4 +1,4 @@
-
+@import "vendors/reset.scss";
  $color-primary:#FF79DA;
  $color-secondaire:#9356DC;
 $color-tertiaire:#99E2D0;
@@ -91,11 +91,13 @@ transition: padding-right 450ms ease-in-out;
   transition: transform 330ms ease-in-out;  
 }
 @mixin artilcle-h4{
-  margin-top: -10px;
+ font-size:20px;
   margin-left: 10px;
- font-family:'Roboto';
- font-weight:bold;
-  
+  font-family: 'Roboto Condensed', sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ margin-top:15px ;
 
 
 
@@ -107,21 +109,22 @@ transition: padding-right 450ms ease-in-out;
   justify-content: space-between;
   align-items: center; 
   margin-left:10px;
- font-size:17px ;
-margin-top: -15px;
+ 
+ margin-top:5px ;
 
 }
-@mixin art-p {margin: 0;
+@mixin art-p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
- font-size:smaller;
+  font-weight:lighter;
+  font-size:15px ;
 }
 
 
     .wapper{@include width-display;
 
- height:1641px;
+ height:1580px;
  width: 100%;
 
 grid-template-rows:80px 1fr 4fr 1fr 1fr;
@@ -134,46 +137,44 @@ header{
     grid-area:header;
     background-color:#FEFEFE;
     @include width-display;   
-   grid-template-rows:80px 300px;
+   grid-template-rows:50px 270px;
  
-   height: 380px;
+   height: 320px;
    
   .header__box{background-color:#FEFEFE;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:repeat(2, 1fr);
 display:grid ;
 
-    height: 80px;
+    height: 60px;
   .acueil{
      margin-left: 20px;
-     margin-top :30px;
+     margin-top :20px;
+     color: black;
   }
   .logo{align-self: center;
 justify-self: center;
 font-family: 'Shrikhand', cursif ;
-margin-top:-10px ;
-
-
-
-
 font-weight: lighter;
+font-size:29px;
+margin-top :5px;
   }
    }
    .header_img-pal{
-    margin-top:-20px;
+  
   object-fit:cover ;
  width:100%;
- height:300px ;
+ height:270px ;
    }
    }
 
 section{
    grid-area:section;
  @include width-display;
- height: 1010px;
+ height:950px;
  margin-top :-20px;
-border-top-left-radius:25px;
-border-top-right-radius:25px;
+border-top-left-radius:30px;
+border-top-right-radius:30px;
 background-color: #f2f2f2;
 .section__animation{ 
   @include anim;
@@ -191,11 +192,15 @@ background-color: #f2f2f2;
    grid-template-rows:1fr 1fr;
    grid-template-columns:280px 0.5fr 1fr ;
  @include width-display;
+ @media only screen and (max-width : 300px){
+  grid-template-columns: 1fr ;
+
+ }
 .section__page_lap{ display:grid;margin-top:20px;
   font-family : 'Shrikhand', cursif ;
 
  margin-left: 20px;
- font-size: 25px;
+ font-size: 27px;
  grid-area: 1/1;
 
 }
@@ -223,8 +228,11 @@ background-color: #f2f2f2;
   }
 .section_box__ent{
  @include green-line;
- margin-top: 5px;
+ margin-top: 15px;
 grid-area:2/ 1;
+@media only screen and (max-width : 300px){
+  margin-top:-5px;
+}
 .ent{
 
  margin-top:5px;
@@ -455,7 +463,7 @@ margin-top: 5px ;
 @mixin navbtn_1234{
   width:100% ;
      grid-area: nav;
-    height:200px ;
+    height:190px ;
     display:grid;
     background-color:#f2f2f2; 
   align-items:center ;
@@ -477,9 +485,9 @@ margin-top: 5px ;
   nav{@include navbtn_1234;
 
 
-  .box_btn{
+  .box_btn{margin-top:40px; 
  @include nav_btn-page1234;
- margin-top:-20px ;
+
    }     
  
  
@@ -507,9 +515,9 @@ margin-top: 5px ;
   footer{
     grid-area:footer;
   width:100%;
-  height:210px; 
+  height:190px; 
   background-color:#322f2f;  
-  margin-top:-30px ;
+ 
   
    
 .footer_box-logo{width:150px;
