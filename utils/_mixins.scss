@@ -131,3 +131,115 @@
   font-size:15px ;
   color:white;
 }
+@mixin heart__hover{ 
+  cursor: pointer;
+  transition: all 1s ease-out;
+    background: -webkit-gradient(linear, left top, left bottom,
+     from($color-secondaire), to($color-primary));
+  -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;         
+    font-weight:bold;
+}
+@mixin green-line{
+  width: 100px;
+  height:30px;  
+display: grid;
+border-bottom:4px solid $color-tertiaire;
+width:43px;
+margin-left:20px;  
+}
+
+@mixin box-article{
+  height: 68px;
+  -webkit-animation-duration: 3s;
+ -webkit-animation-name:glissement;
+ margin-left:10px;
+ margin-right:10px; 
+border-radius:15px;
+
+position: relative;
+background-color: #fff;
+box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+cursor: pointer;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+transition: padding-right 450ms ease-in-out;
+&:hover {
+  padding-right: 75px;
+  &:hover .section__animation {
+    opacity: 1;
+    transform: translate(-50px);
+  }
+  &:hover .fa-check-circle {
+    transform: rotate(360deg)
+  }
+}
+}
+@mixin anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 68px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;  
+}
+@mixin artilcle-h4{
+ font-size:20px;
+  margin-left: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ margin-top:15px ;
+
+
+
+
+
+}
+@mixin section__art{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-left:10px;
+ 
+ margin-top:5px ;
+
+}
+@mixin art-p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight:lighter;
+  font-size:15px ;
+}
+@mixin navbtn_1234{
+  width:100% ;
+     grid-area: nav;
+    height:190px ;
+    display:grid;
+    background-color:#f2f2f2; 
+  align-items:center ;
+  justify-items: center;
+
+}
+@mixin nav_btn-page1234{background:linear-gradient(180deg, $color-primary,$color-secondaire);
+  border-radius:30px;
+  align-items:center ;
+ justify-items: center;
+   box-shadow: 0 5px 5px -3px #333;
+   width: 200px;
+  display:grid ;
+   height:49px;
+   cursor:pointer;
+  
+}

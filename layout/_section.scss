@@ -1,7 +1,5 @@
 
-
  
-
 .section_box-img{  
   @include section_img;
  
@@ -169,4 +167,294 @@
    @include section_box_h1;
  }
  
+ section{
+  grid-area:section;
+@include width-display;
+height:950px;
+margin-top :-20px;
+border-top-left-radius:30px;
+border-top-right-radius:30px;
+background-color: #f2f2f2;
+.section__animation{ 
+ @include anim;
+}
+.section__animation .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+
+
+
+.section_page{
+  height: 150px;
+margin-top: 15px;
+  grid-template-rows:1fr 1fr;
+  grid-template-columns:280px 0.5fr 1fr ;
+@include width-display;
+@media only screen and (max-width : 300px){
+ grid-template-columns: 1fr ;
+
+}
+.section__page_lap{ display:grid;margin-top:20px;
+ font-family : 'Shrikhand', cursif ;
+
+margin-left: 20px;
+font-size: 27px;
+grid-area: 1/1;
+
+}
+}
+  .section_heart{
+
+   width: 28px;
+   height: 30px;
+ grid-area: 1/2;
+margin-left:10px ;
+margin-top: 15px;
+
+  }
+ .fa-heart{
+   margin-top:10px;
+   
+   font-size:23px;
+   .fa-heart::before {
+     content: "\f004";
+   }
+ }
+ .fa-heart:hover { 
+  @include heart__hover;
+   
+ }
+.section_box__ent{
+@include green-line;
+margin-top: 15px;
+grid-area:2/ 1;
+@media only screen and (max-width : 300px){
+ margin-top:-5px;
+}
+.ent{
+
+margin-top:5px;
+}
+
+}
+@keyframes glissement {
+ from {
+   margin-top: 100%;
+   width: 300%;
+ }
+
+ to {
+   margin-left: 0%;
+   width: 100%;
+ }
+}
+
+
+
+
+.menu_entrée{
+
+@include width-display;
+margin-top:-20px ;
+
+height:239px ;
+
+.box_art-un{
+ @include box-article;   
+
+
+.section_article-h4{
+ @include artilcle-h4;
+
+
+
+}
+
+
+.section__art{ @include section__art;
+}
+.section__art p{@include art-p;
+} 
+.section__art span{
+   padding-right:15px;
+
+
+}
+}
+
+
+.box_art-deux{
+@include box-article;
+margin-top:15px ;
+
+.section_article-foi{
+@include artilcle-h4;
+}
+.section__art{ @include section__art;
+}
+.section__art p{@include art-p; 
+}
+.section__art span{
+   padding-right:15px;
+
+
+}
+
+
+}
+.box_art-trois{ @include box-article;
+margin-top:15px ;
+.section_article-oeuf{
+ @include artilcle-h4;  
+}
+
+.section__art{ @include section__art;
+}
+.section__art p{@include art-p; 
+}
+.section__art span{
+   padding-right:15px;
+
+}
+}
+
+}
+
+.section_box__plat{
+margin-top:30px;
+@include green-line;
+.plat{
+margin-top: 5px ;
+
+}
+
+
+}
+.menu_plat{ margin-top:10px;
+ @include width-display;
+ height:239px;
+
+
+
+.box_quatre{
+ @include box-article;  
+
+.section_article-h4{
+ @include artilcle-h4;
+
+}
+.section__art{ @include section__art;
+}
+.section__art p{@include art-p;
+} 
+.section__art span{
+ padding-right:15px;
+
+}
+
+
+}
+.box_cinq{ @include box-article;  
+ margin-top: 10px;
+;
+ .section_article-h4{
+   @include artilcle-h4;
  
+ }
+ .section__art{ @include section__art;
+ }
+  .section__art p{@include art-p;
+  } 
+  .section__art span{
+   padding-right:15px;
+ 
+  }
+
+
+}
+
+.box_six{ @include box-article; 
+ margin-top: 10px; 
+ .section_article-h4{
+   @include artilcle-h4;
+ }
+ .section__art{@include  section__art;
+ }
+
+ .section__art p{@include art-p;
+ } 
+ .section__art span{
+  padding-right:15px;
+
+ }
+
+}
+
+}
+
+.section_box__dessert{
+ @include green-line;
+margin-top:30px ;
+ .dessert{
+   margin-top: 5px ; 
+ }
+
+
+}
+.menu_dessert{ 
+ @include width-display;
+ height:239px;
+
+ margin-top: 15px;
+ .box_sept{ @include box-article; 
+ .section_article-h4{
+    @include artilcle-h4;
+   }
+   .section__art{@include  section__art;
+   }
+ 
+   .section__art p{@include art-p;
+   } 
+   .section__art span{
+    padding-right:15px;
+
+   }
+ }
+ .box_huit{ @include box-article; 
+   margin-top:10px;
+  
+   .section_article-h4{
+      @include artilcle-h4;
+     }
+     .section__art{@include  section__art;
+     }
+   
+     .section__art p{@include art-p;
+     } 
+     .section__art span{
+      padding-right:15px;
+  
+     }
+   }
+   .box_neuf{ @include box-article; 
+   margin-top:10px;
+     .section_article-h4{
+        @include artilcle-h4;
+       }
+       .section__art{@include  section__art;
+       }
+     
+       .section__art p{@include art-p;
+       } 
+       .section__art span{
+        padding-right:15px;
+    
+       }
+     }
+
+
+}
+
+
+}

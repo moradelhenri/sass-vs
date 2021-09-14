@@ -75,4 +75,37 @@
   }
   
   
+  header{ 
+    grid-area:header;
+    background-color:#FEFEFE;
+    @include width-display;   
+   grid-template-rows:50px 270px;
+ 
+   height: 320px;
+   
+  .header__box{background-color:#FEFEFE;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+display:grid ;
+
+    height: 60px;
+  .acueil{
+     margin-left: 20px;
+     margin-top :20px;
+     color: black;
+  }
+  .logo{align-self: center;
+justify-self: center;
+font-family: 'Shrikhand', cursif ;
+font-weight: lighter;
+font-size:29px;
+margin-top :5px;
+  }
+   }
+   .header_img-pal{
   
+  object-fit:cover ;
+ width:100%;
+ height:270px ;
+   }
+   }

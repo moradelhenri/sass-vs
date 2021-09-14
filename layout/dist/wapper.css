@@ -9,58 +9,48 @@
   grid-template-rows: 1fr 1fr 2fr 6fr 1fr;
   grid-template-areas: "header" " header_nav" "nav" "section" "foot";
 }
-
 @media (min-width: 1010px) {
   .wapper {
     grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
   }
 }
-
 @media screen and (min-width: 375px) {
   .wapper {
     max-width: 375px;
   }
 }
-
 @media screen and (min-width: 480px) {
   .wapper {
     max-width: 480px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .wapper {
     max-width: 768px;
   }
 }
-
 @media screen and (min-width: 900px) {
   .wapper {
     max-width: 900px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .wapper {
     max-width: 1024px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .wapper {
     max-width: 1280px;
   }
 }
-
 @media screen and (min-width: 1366px) {
   .wapper {
     max-width: 1366px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .wapper {
     max-width: 1440px;
   }
 }
-/*# sourceMappingURL=wapper.css.map */

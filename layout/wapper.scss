@@ -1,4 +1,4 @@
-.wapper{ width: 100%;
+.wapper{ width: 1440px;
     animation-duration:4s;
     animation-name:wapper_slide;
      margin:0 auto;
@@ -6,7 +6,7 @@
        height:2248px; 
         grid-template-columns: 1fr;
        grid-template-rows:1fr 1fr 2fr 6fr 1fr;
-       border: 1px solid black;
+    
        grid-template-areas:
        "header"" header_nav"
        "nav" "section"   
@@ -45,4 +45,4 @@
    $breakpoints:(
     tablet-up: 768px 
    );
-   
+ 

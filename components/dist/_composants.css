@@ -1,0 +1,10 @@
+.box_btn-btn {
+  display: inline;
+  color: white;
+  font-weight: 600;
+}
+
+.box_btn:hover {
+  transform: scale(1.2);
+  transition-duration: 3s;
+}

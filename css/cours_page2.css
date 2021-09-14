@@ -60,7 +60,7 @@ a:link {
 .wapper {
   width: 100%;
   display: grid;
-  height: 1580px;
+  height: 1680px;
   width: 100%;
   grid-template-rows: 80px 1fr 4fr 1fr 1fr;
   grid-template-areas: "header" "header" "section" "nav" "footer";
@@ -70,8 +70,8 @@ a:link {
   background-color: #FEFEFE;
   width: 100%;
   display: grid;
-  grid-template-rows: 50px 270px;
-  height: 320px;
+  grid-template-rows: 50px 300px;
+  height: 350px;
 }
 .wapper header .header__box {
   background-color: #FEFEFE;
@@ -83,7 +83,7 @@ a:link {
 .wapper header .header__box .acueil {
   margin-left: 20px;
   margin-top: 20px;
-  color: black;
+  
 }
 .wapper header .header__box .logo {
   align-self: center;
@@ -97,14 +97,14 @@ a:link {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 270px;
+  height: 300px;
 }
 .wapper section {
   grid-area: section;
   width: 100%;
   display: grid;
-  height: 950px;
-  margin-top: -20px;
+  height: 1100px;
+  margin-top: -70px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   background-color: #f2f2f2;
@@ -178,7 +178,7 @@ a:link {
   border-bottom: 4px solid #99E2D0;
   width: 43px;
   margin-left: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
   grid-area: 2/1;
 }
 @media only screen and (max-width: 300px) {
@@ -187,7 +187,7 @@ a:link {
   }
 }
 .wapper section .section_box__ent .ent {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 @-webkit-keyframes glissement {
   from {
@@ -212,8 +212,8 @@ a:link {
 .wapper section .menu_entrée {
   width: 100%;
   display: grid;
-  margin-top: -20px;
-  height: 239px;
+  margin-top: -25px;
+  height: 300px;
 }
 .wapper section .menu_entrée .box_art-un {
   height: 68px;
@@ -244,7 +244,7 @@ a:link {
 .wapper section .menu_entrée .box_art-un .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -297,7 +297,7 @@ a:link {
 .wapper section .menu_entrée .box_art-deux .section_article-foi {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -350,7 +350,7 @@ a:link {
 .wapper section .menu_entrée .box_art-trois .section_article-oeuf {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -373,8 +373,61 @@ a:link {
 .wapper section .menu_entrée .box_art-trois .section__art span {
   padding-right: 15px;
 }
+.wapper section .menu_entrée .box_art-trois-bis {
+  height: 68px;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: glissement;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+  margin-top: 15px;
+}
+.wapper section .menu_entrée .box_art-trois-bis:hover {
+  padding-right: 75px;
+}
+.wapper section .menu_entrée .box_art-trois-bis:hover:hover .section__animation {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.wapper section .menu_entrée .box_art-trois-bis:hover:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.wapper section .menu_entrée .box_art-trois-bis .section_article-oeuf {
+  font-size: 20px;
+  margin-left: 10px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.wapper section .menu_entrée .box_art-trois-bis .section__art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.wapper section .menu_entrée .box_art-trois-bis .section__art p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.wapper section .menu_entrée .box_art-trois-bis .section__art span {
+  padding-right: 15px;
+}
 .wapper section .section_box__plat {
-  margin-top: 30px;
+  margin-top: 60px;
   width: 100px;
   height: 30px;
   display: grid;
@@ -383,10 +436,10 @@ a:link {
   margin-left: 20px;
 }
 .wapper section .section_box__plat .plat {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .wapper section .menu_plat {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 100%;
   display: grid;
   height: 239px;
@@ -420,7 +473,7 @@ a:link {
 .wapper section .menu_plat .box_quatre .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -473,7 +526,7 @@ a:link {
 .wapper section .menu_plat .box_cinq .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -526,7 +579,7 @@ a:link {
 .wapper section .menu_plat .box_six .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -556,10 +609,10 @@ a:link {
   border-bottom: 4px solid #99E2D0;
   width: 43px;
   margin-left: 20px;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 .wapper section .section_box__dessert .dessert {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .wapper section .menu_dessert {
   width: 100%;
@@ -596,7 +649,7 @@ a:link {
 .wapper section .menu_dessert .box_sept .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -649,7 +702,7 @@ a:link {
 .wapper section .menu_dessert .box_huit .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -702,7 +755,7 @@ a:link {
 .wapper section .menu_dessert .box_neuf .section_article-h4 {
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -728,14 +781,14 @@ a:link {
 .wapper nav {
   width: 100%;
   grid-area: nav;
-  height: 190px;
+  height: 180px;
   display: grid;
   background-color: #f2f2f2;
   align-items: center;
   justify-items: center;
 }
 .wapper nav .box_btn {
-  margin-top: 40px;
+  margin-top: -30px;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   border-radius: 30px;
   align-items: center;
@@ -758,8 +811,9 @@ a:link {
 .wapper footer {
   grid-area: footer;
   width: 100%;
-  height: 190px;
+  height: 210px;
   background-color: #322f2f;
+  margin-top: -10px;
 }
 .wapper footer .footer_box-logo {
   width: 150px;
