@@ -171,7 +171,7 @@ header {
   display: grid;
   grid-area: header;
   width: 100%;
-  margin-top: 0.3rem;
+
   grid-template-rows: repeat(2, 1fr);
 }
 
@@ -656,7 +656,7 @@ h2 {
 
 .heart:hover, .heart_deux-img:hover, .heart_trois-img:hover {
   cursor: pointer;
-  transition: color 1s ease-out;
+  transition: color 3s ease-out;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
 }
 
