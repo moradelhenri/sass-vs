@@ -90,11 +90,11 @@ a {
 }
 
 @keyframes wapper_slide {
-  from {
+ from{ visibility:hidden;
     margin-left: 100%;
     width: 300%;
   }
-  to {
+to {visibility:hidden;
     margin-left: 0%;
     width: 100%;
   }
@@ -102,8 +102,11 @@ a {
 
 .wapper {
   width: 100%;
+ 
   animation-duration: 4s;
+
   animation-name: wapper_slide;
+
   margin: 0 auto;
   display: grid;
   height: 2248px;
