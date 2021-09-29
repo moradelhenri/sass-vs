@@ -132,7 +132,7 @@ a:link {
   height: 150px;
   margin-top: 15px;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 280px 0.5fr 1fr;
+  grid-template-columns: 280px 1fr 1fr 0.5fr 50px;
   width: 100%;
   display: grid;
 }
@@ -152,8 +152,8 @@ a:link {
 .wapper section .section_heart {
   width: 28px;
   height: 30px;
-  grid-area: 1/2;
-  margin-left: 10px;
+  grid-area: 1/5;
+
   margin-top: 15px;
 }
 .wapper section .fa-heart {
